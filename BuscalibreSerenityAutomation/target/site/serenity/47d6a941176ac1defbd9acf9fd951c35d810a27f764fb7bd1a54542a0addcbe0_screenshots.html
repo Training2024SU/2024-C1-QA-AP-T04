@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="ecdbfd94f0cf563b63f4bd196e68790138fd07ab5dd756008e92eb6812b2c5ee.html">Purchase Books In Buscalibre</a></span>
+                > <span class="truncate-60"><a
+                    href="47d6a941176ac1defbd9acf9fd951c35d810a27f764fb7bd1a54542a0addcbe0.html">Purchase a book through the search engine with no registered user </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 19-05-2024 12:22</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Purchase Books In Buscalibre </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                i as a user of Buscalibre<br />
+want to navigate through the page<br />
+to buy books
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="484c18c294bd615a82ca8ff694dc4c509823ec560a2d902b1571f685eceeddfc.html">Ruta Critica1
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6c5512236937b92cd7a296b24edb966c2bd94be46b8910f8b129a42d6150eb25.html">1 To 10 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Purchase a book through the search engine with no registered user
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="60261ffeaa9eb093f193927d77ca0601f512883c8443c5bce7092229c0688e60.png" title=" Given the user is in the Buscalibre web page with browser 2" width="0"/>
+                <img src="60261ffeaa9eb093f193927d77ca0601f512883c8443c5bce7092229c0688e60.png" title=" Luis open home page" width="0"/>
+                <img src="60261ffeaa9eb093f193927d77ca0601f512883c8443c5bce7092229c0688e60.png" title=" Luis opens the browser at https://www.buscalibre.com.co/" width="0"/>
+                <img src="45dedd15b1448f54d05c36da1c00506d74ea1fbb724c41bf403c1828b8ac0d6b.png" title=" Luis opens the browser at https://www.buscalibre.com.co/ (completed)" width="0"/>
+                <img src="45dedd15b1448f54d05c36da1c00506d74ea1fbb724c41bf403c1828b8ac0d6b.png" title=" Luis open home page (completed)" width="0"/>
+                <img src="45dedd15b1448f54d05c36da1c00506d74ea1fbb724c41bf403c1828b8ac0d6b.png" title=" Given the user is in the Buscalibre web page with browser 2 (completed)" width="0"/>
+                <img src="9f63d790cfebeae56e7479baf2101a6ac35d21b2b9e25821962f6727a5f9818d.png" title=" And search &quot;LA BRUJA&quot; in the search engine selecting it" width="0"/>
+                <img src="9f63d790cfebeae56e7479baf2101a6ac35d21b2b9e25821962f6727a5f9818d.png" title=" Luis search book" width="0"/>
+                <img src="9f63d790cfebeae56e7479baf2101a6ac35d21b2b9e25821962f6727a5f9818d.png" title=" Luis enters 'LA BRUJA' into Search engine" width="0"/>
+                <img src="9f63d790cfebeae56e7479baf2101a6ac35d21b2b9e25821962f6727a5f9818d.png" title=" Luis clicks on Search engine" width="0"/>
+                <img src="cd1f703d61ceba131d89e3ce8b2682e4fcb4288cd2f0cb6c842a77cf0dfdaf83.png" title=" Luis clicks on Search engine (completed)" width="0"/>
+                <img src="cd1f703d61ceba131d89e3ce8b2682e4fcb4288cd2f0cb6c842a77cf0dfdaf83.png" title=" Luis search book (completed)" width="0"/>
+                <img src="cd1f703d61ceba131d89e3ce8b2682e4fcb4288cd2f0cb6c842a77cf0dfdaf83.png" title=" Luis select a book" width="0"/>
+                <img src="5c09befdc9f23db208163bad8b8bb276ac282f1d6d024c0e53ccbf4e34c40cb1.png" title=" Luis clicks on Search engine" width="0"/>
+                <img src="70aafc8843b12b1e73215af662f6bacbf5d99ca9f71c376f4c27c02d491d4514.png" title=" Luis clicks on Search engine (completed)" width="0"/>
+                <img src="70aafc8843b12b1e73215af662f6bacbf5d99ca9f71c376f4c27c02d491d4514.png" title=" Luis select a book (completed)" width="0"/>
+                <img src="70aafc8843b12b1e73215af662f6bacbf5d99ca9f71c376f4c27c02d491d4514.png" title=" And search &quot;LA BRUJA&quot; in the search engine selecting it (completed)" width="0"/>
+                <img src="90cc8cc36782a825aa36e65f62438145ba7dcbe1b0c59b0d32298afb042a4a1c.png" title=" When adds it to the cart 2 additional specimens" width="0"/>
+                <img src="90cc8cc36782a825aa36e65f62438145ba7dcbe1b0c59b0d32298afb042a4a1c.png" title=" Luis add product to cart" width="0"/>
+                <img src="90cc8cc36782a825aa36e65f62438145ba7dcbe1b0c59b0d32298afb042a4a1c.png" title=" Luis selects index #index in dropdown" width="0"/>
+                <img src="aa36b0b85e7dfdca24de67df8b08b8f62d9d71b9454eb87d8aeb15c48b33e970.png" title=" Luis selects index #index in dropdown (completed)" width="0"/>
+                <img src="aa36b0b85e7dfdca24de67df8b08b8f62d9d71b9454eb87d8aeb15c48b33e970.png" title=" Luis clicks on buy button" width="0"/>
+                <img src="7bb32d9f679ad8ff9946fe6c3fc92babd060d4272678e1e10249622da4a807e5.png" title=" Luis clicks on buy button (completed)" width="0"/>
+                <img src="7bb32d9f679ad8ff9946fe6c3fc92babd060d4272678e1e10249622da4a807e5.png" title=" Luis add product to cart (completed)" width="0"/>
+                <img src="7bb32d9f679ad8ff9946fe6c3fc92babd060d4272678e1e10249622da4a807e5.png" title=" When adds it to the cart 2 additional specimens (completed)" width="0"/>
+                <img src="ea8fdd8155fa0103991a6342a86fdb6ae087023af74f8c14ac75c1aea47d6751.png" title=" And finish the purchase filling out the delivery and payment process" width="0"/>
+                <img src="ea8fdd8155fa0103991a6342a86fdb6ae087023af74f8c14ac75c1aea47d6751.png" title=" Luis finish purchase" width="0"/>
+                <img src="ea8fdd8155fa0103991a6342a86fdb6ae087023af74f8c14ac75c1aea47d6751.png" title=" Luis clicks on finish purchase button" width="0"/>
+                <img src="ea8fdd8155fa0103991a6342a86fdb6ae087023af74f8c14ac75c1aea47d6751.png" title=" Luis finish purchase (completed)" width="0"/>
+                <img src="ea8fdd8155fa0103991a6342a86fdb6ae087023af74f8c14ac75c1aea47d6751.png" title=" Luis fill out account form" width="0"/>
+                <img src="ea8fdd8155fa0103991a6342a86fdb6ae087023af74f8c14ac75c1aea47d6751.png" title=" Luis enters 'brandon.cronin@gmail.com' into email input" width="0"/>
+                <img src="2b7188505a38a76e794eadd8a64dfd38d1fd7d8e0b98f82a7d8f968da3f72ddb.png" title=" Luis enters 'brandon.cronin@gmail.com' into email input (completed)" width="0"/>
+                <img src="2b7188505a38a76e794eadd8a64dfd38d1fd7d8e0b98f82a7d8f968da3f72ddb.png" title=" Luis clicks on continue button" width="0"/>
+                <img src="70ede4f9bc744e5780bc3501a0ba4a4452dc8354b070d833a40022f423971893.png" title=" Luis clicks on continue button (completed)" width="0"/>
+                <img src="70ede4f9bc744e5780bc3501a0ba4a4452dc8354b070d833a40022f423971893.png" title=" Luis enters 'brandon.cronin@gmail.com' into confirm your email input" width="0"/>
+                <img src="d720898ced48e20c0c59b49168f3e8ec9dec805ac1ad0bec1db9d677c6d6109e.png" title=" Luis enters 'brandon.cronin@gmail.com' into confirm your email input (completed)" width="0"/>
+                <img src="d720898ced48e20c0c59b49168f3e8ec9dec805ac1ad0bec1db9d677c6d6109e.png" title=" Luis enters 'Kina' into name input" width="0"/>
+                <img src="6bc0531d8175f8003eb062df34c75381ccb21515793419171d1e2ad6d8442675.png" title=" Luis enters 'Kina' into name input (completed)" width="0"/>
+                <img src="6bc0531d8175f8003eb062df34c75381ccb21515793419171d1e2ad6d8442675.png" title=" Luis enters 'Toy' into last name input" width="0"/>
+                <img src="0912fc7a4749eedb72126a89dfd9733640d3bd8e72cd38898a4b4d51c67600e5.png" title=" Luis enters 'Toy' into last name input (completed)" width="0"/>
+                <img src="0912fc7a4749eedb72126a89dfd9733640d3bd8e72cd38898a4b4d51c67600e5.png" title=" Luis enters 'vm2egudu4828sc9' into password input" width="0"/>
+                <img src="28e1558af55b9293881c6a9d0efe21168de69f48dd9b54dc3778d06f80ee3eab.png" title=" Luis enters 'vm2egudu4828sc9' into password input (completed)" width="0"/>
+                <img src="28e1558af55b9293881c6a9d0efe21168de69f48dd9b54dc3778d06f80ee3eab.png" title=" Luis enters 'vm2egudu4828sc9' into password input" width="0"/>
+                <img src="15446857ec686c2cf3e182672a0285890ef6746a39bce9f7a3bcac2990783cc5.png" title=" Luis enters 'vm2egudu4828sc9' into password input (completed)" width="0"/>
+                <img src="15446857ec686c2cf3e182672a0285890ef6746a39bce9f7a3bcac2990783cc5.png" title=" Luis clicks on create account button" width="0"/>
+                <img src="37cf049582659bfd89d6949ff36d9728600b6dd2a9020d47d6b7a85e160d38d9.png" title=" Luis clicks on create account button (completed)" width="0"/>
+                <img src="37cf049582659bfd89d6949ff36d9728600b6dd2a9020d47d6b7a85e160d38d9.png" title=" Luis fill out account form (completed)" width="0"/>
+                <img src="37cf049582659bfd89d6949ff36d9728600b6dd2a9020d47d6b7a85e160d38d9.png" title=" Luis fill out delivery form" width="0"/>
+                <img src="37cf049582659bfd89d6949ff36d9728600b6dd2a9020d47d6b7a85e160d38d9.png" title=" Luis select random state" width="0"/>
+                <img src="37cf049582659bfd89d6949ff36d9728600b6dd2a9020d47d6b7a85e160d38d9.png" title=" Luis selects index #index in state dropdown" width="0"/>
+                <img src="e7c04a209ca8393cd81bd293b575f30806172599d304fb058f6a6f6f2023e770.png" title=" Luis selects index #index in state dropdown (completed)" width="0"/>
+                <img src="e7c04a209ca8393cd81bd293b575f30806172599d304fb058f6a6f6f2023e770.png" title=" Luis select random state (completed)" width="0"/>
+                <img src="e7c04a209ca8393cd81bd293b575f30806172599d304fb058f6a6f6f2023e770.png" title=" Luis enters '399-01-1369' into id input" width="0"/>
+                <img src="7a914eb460587f57b472bc9049c097867416a2733e3e8f576947a764274070df.png" title=" Luis enters '399-01-1369' into id input (completed)" width="0"/>
+                <img src="7a914eb460587f57b472bc9049c097867416a2733e3e8f576947a764274070df.png" title=" Luis select random city" width="0"/>
+                <img src="7a914eb460587f57b472bc9049c097867416a2733e3e8f576947a764274070df.png" title=" Luis selects index #index in city dropdown" width="0"/>
+                <img src="d5d90cc453207d11b73257144818db26f339a2c2837ef3f95bc7041b493e8256.png" title=" Luis selects index #index in city dropdown (completed)" width="0"/>
+                <img src="d5d90cc453207d11b73257144818db26f339a2c2837ef3f95bc7041b493e8256.png" title=" Luis select random city (completed)" width="0"/>
+                <img src="d5d90cc453207d11b73257144818db26f339a2c2837ef3f95bc7041b493e8256.png" title=" Luis enters 'Burl McLaughlin' into addressee input" width="0"/>
+                <img src="17a7c53a5b0a4a586209d14bededf118c1d0382ee65a73e1f02bb678bba6189f.png" title=" Luis enters 'Burl McLaughlin' into addressee input (completed)" width="0"/>
+                <img src="17a7c53a5b0a4a586209d14bededf118c1d0382ee65a73e1f02bb678bba6189f.png" title=" Luis enters '41740 Shayne Trace' into address input" width="0"/>
+                <img src="ebb5f059784414823619609c2bf6d14f093b816ec2c54c073dfcc0fb75edfff0.png" title=" Luis enters '41740 Shayne Trace' into address input (completed)" width="0"/>
+                <img src="ebb5f059784414823619609c2bf6d14f093b816ec2c54c073dfcc0fb75edfff0.png" title=" Luis enters '1-734-251-3497' into phone input" width="0"/>
+                <img src="9e7a0b26defa03c866ea65698557cacc3a8a8f36c4bddab4c4cc0fe68c9f11af.png" title=" Luis enters '1-734-251-3497' into phone input (completed)" width="0"/>
+                <img src="9e7a0b26defa03c866ea65698557cacc3a8a8f36c4bddab4c4cc0fe68c9f11af.png" title=" Luis clicks on validate address button" width="0"/>
+                <img src="e27eda6b1a7370ebd25b931b02ef037ad5234627f68a9696b28c31d5169a9a3a.png" title=" Luis clicks on validate address button (completed)" width="0"/>
+                <img src="cff845f00f628a78cfdefffc43af17fac3e1369b8442f7c44c0294761d924389.png" title=" Luis clicks on send here button" width="0"/>
+                <img src="df2748b37f0f039a818ca51ecd5a09735f34c148687be703dd61228877bc74ab.png" title=" Luis clicks on send here button (completed)" width="0"/>
+                <img src="df2748b37f0f039a818ca51ecd5a09735f34c148687be703dd61228877bc74ab.png" title=" Luis fill out delivery form (completed)" width="0"/>
+                <img src="75820ccc5c904acc1a9ec14e8afc2ff40c9a36f54244250342c3f7da38fd7187.png" title=" And finish the purchase filling out the delivery and payment process (completed)" width="0"/>
+                <img src="75820ccc5c904acc1a9ec14e8afc2ff40c9a36f54244250342c3f7da38fd7187.png" title=" Then should see the message &quot;Selecciona Forma de Pago:&quot;" width="0"/>
+
+                <img src="75820ccc5c904acc1a9ec14e8afc2ff40c9a36f54244250342c3f7da38fd7187.png" title=" Then title should be 'Selecciona Forma de Pago:': <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.46</span>
+</div>
+</body>
+</html>
