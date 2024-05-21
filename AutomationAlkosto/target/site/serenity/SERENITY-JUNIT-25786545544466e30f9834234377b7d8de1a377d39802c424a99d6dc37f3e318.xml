@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Proceso de compra en pagina de Alkosto" skipped="0" tests="1" time="7.7" timestamp="2024-05-21 10:04:51"><testcase name="Realizar compra con usuario registrado"><error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//li[@id='js-loginEmailPass']&quot;}&#10;  (Session info: chrome=124.0.6367.208)&#10;For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception&#10;Build info: version: '4.16.1', revision: '9b4c83354e'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [0a15fd7be3591a0ec96f48dbfab43401, findElement {using=xpath, value=//li[@id='js-loginEmailPass']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.208, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63967}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63967/devtoo..., se:cdpVersion: 124.0.6367.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 0a15fd7be3591a0ec96f48dbfab43401" type="org.openqa.selenium.NoSuchElementException">no such element: Unable to locate element: {"method":"xpath","selector":"//li[@id='js-loginEmailPass']"}
+  (Session info: chrome=124.0.6367.208)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0a15fd7be3591a0ec96f48dbfab43401, findElement {using=xpath, value=//li[@id='js-loginEmailPass']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.208, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63967}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63967/devtoo..., se:cdpVersion: 124.0.6367.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0a15fd7be3591a0ec96f48dbfab43401</error><system-err>no such element: Unable to locate element: {"method":"xpath","selector":"//li[@id='js-loginEmailPass']"}
+  (Session info: chrome=124.0.6367.208)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0a15fd7be3591a0ec96f48dbfab43401, findElement {using=xpath, value=//li[@id='js-loginEmailPass']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.208, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63967}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63967/devtoo..., se:cdpVersion: 124.0.6367.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0a15fd7be3591a0ec96f48dbfab43401&#13;
+net.thucydides.core.webdriver.WebDriverFacade.findElement(WebDriverFacade.java:259)&#13;
+net.thucydides.core.webdriver.javascript.JavascriptExecutorFacade.webElementOrPrimitiveTypeOf(JavascriptExecutorFacade.java:89)&#13;
+net.thucydides.core.webdriver.javascript.JavascriptExecutorFacade.lambda$extractedWebElementsAndPrimitiveTypesFrom$0(JavascriptExecutorFacade.java:83)&#13;
+net.thucydides.core.webdriver.javascript.JavascriptExecutorFacade.extractedWebElementsAndPrimitiveTypesFrom(JavascriptExecutorFacade.java:84)&#13;
+net.thucydides.core.webdriver.javascript.JavascriptExecutorFacade.executeScript(JavascriptExecutorFacade.java:72)&#13;
+co.com.sofkau.tasks.NavegarALogin.performAs(NavegarALogin.java:13)&#13;
+net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:523)&#13;
+net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:503)&#13;
+net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:475)&#13;
+net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:217)&#13;
+net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:204)&#13;
+net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:92)&#13;
+co.com.sofkau.stepdefinitions.CompraUsuarioRegistradoStepDefinition.seAutenticaEIngresaSusDatosCorrectamente(CompraUsuarioRegistradoStepDefinition.java:59)&#13;
+io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
+io.cucumber.java.Invoker.invoke(Invoker.java:24)&#13;
+io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)&#13;
+io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)&#13;
+io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)&#13;
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)&#13;
+io.cucumber.core.runner.TestStep.run(TestStep.java:56)&#13;
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)&#13;
+io.cucumber.core.runner.TestCase.run(TestCase.java:84)&#13;
+io.cucumber.core.runner.Runner.runPickle(Runner.java:75)&#13;
+io.cucumber.core.runtime.Runtime.lambda$executePickle$6(Runtime.java:107)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)&#13;
+io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)&#13;
+io.cucumber.core.runtime.Runtime.lambda$executePickle$7(Runtime.java:107)&#13;
+io.cucumber.core.runtime.Runtime.lambda$runFeatures$3(Runtime.java:89)&#13;
+io.cucumber.core.runtime.Runtime.runFeatures(Runtime.java:90)&#13;
+io.cucumber.core.runtime.Runtime.lambda$run$0(Runtime.java:78)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)&#13;
+io.cucumber.core.runtime.Runtime.run(Runtime.java:78)&#13;
+</system-err></testcase></testsuite>

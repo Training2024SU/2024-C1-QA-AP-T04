@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="pruebas al servicio gratutito weather api" skipped="0" tests="1" time="0.48" timestamp="2024-05-20 10:57:19"><testcase name="Servicio retorna la ciudad capital cuando se pregunta por el clima de una pais entero"/></testsuite>
