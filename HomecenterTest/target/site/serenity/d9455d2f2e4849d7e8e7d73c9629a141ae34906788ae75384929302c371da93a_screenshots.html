@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="bb9a5bc7a662eff328600d6bdc01fdde4ccae9e1ad94cb741c704210d62755d7.html">Compra De Productos En Homecenter Colombia Con Pago Por Efecty</a></span>
+                > <span class="truncate-60"><a
+                    href="d9455d2f2e4849d7e8e7d73c9629a141ae34906788ae75384929302c371da93a.html">Seleccion de producto y compra por Efecty </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 21-05-2024 08:36</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Compra De Productos En Homecenter Colombia Con Pago Por Efecty </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                yo como usuario de la plataforma homecenter.com.co<br />
+quiero buscar un pedido y realizar el proceso de pago efecty<br />
+para disfrutar de un producto de esta empresa
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6c5512236937b92cd7a296b24edb966c2bd94be46b8910f8b129a42d6150eb25.html">1 To 10 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="cca1c269f589a4223d45f72a082fe216d6671f9678cdadec1f936d63f690cb52.html">Compra Homecenter
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Seleccion de producto y compra por Efecty
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="78092b72615843acd5e2af6507e0a4f282e3615c1e487b893d08421eb30dc596.png" title=" Given el usuario esta en la pagina principal de Homecenter" width="0"/>
+                <img src="78092b72615843acd5e2af6507e0a4f282e3615c1e487b893d08421eb30dc596.png" title=" Jorge opens the browser at https://www.homecenter.com.co/homecenter-co/" width="0"/>
+                <img src="4a5d036bdf1e9bc5bfd77421e98f144a442c89cb896fa296441e08b24d3b8b5a.png" title=" Jorge opens the browser at https://www.homecenter.com.co/homecenter-co/ (completed)" width="0"/>
+                <img src="4a5d036bdf1e9bc5bfd77421e98f144a442c89cb896fa296441e08b24d3b8b5a.png" title=" Given el usuario esta en la pagina principal de Homecenter (completed)" width="0"/>
+                <img src="9974743c1e93df3c825d7907800e9ca3ec9937190e7a789f5941402637ec0929.png" title=" When busco el producto &quot;nevera frost&quot;" width="0"/>
+                <img src="9974743c1e93df3c825d7907800e9ca3ec9937190e7a789f5941402637ec0929.png" title=" Jorge buscar producto" width="0"/>
+                <img src="9974743c1e93df3c825d7907800e9ca3ec9937190e7a789f5941402637ec0929.png" title=" Jorge enters 'nevera frost',ENTER into buscador principal" width="0"/>
+                <img src="6abd11a5b15bf4a35d850af9782b6669c422dea8c53b0a4379895de178e4f0c3.png" title=" Jorge enters 'nevera frost',ENTER into buscador principal (completed)" width="0"/>
+                <img src="6abd11a5b15bf4a35d850af9782b6669c422dea8c53b0a4379895de178e4f0c3.png" title=" Jorge buscar producto (completed)" width="0"/>
+                <img src="382631225eb0aba8fe95b8e1dfeeb9193811a345c596d988987eb379c7586c0b.png" title=" When busco el producto &quot;nevera frost&quot; (completed)" width="0"/>
+                <img src="2b0b66bf9e1daa65195619b34692608c7104e0c14b555bc1b8f7205d0357a8ed.png" title=" And lo selecciona y anade al carrito" width="0"/>
+                <img src="2b0b66bf9e1daa65195619b34692608c7104e0c14b555bc1b8f7205d0357a8ed.png" title=" Jorge agregar al carrito" width="0"/>
+                <img src="2b0b66bf9e1daa65195619b34692608c7104e0c14b555bc1b8f7205d0357a8ed.png" title=" Jorge clicks on [[EdgeDriver: MicrosoftEdge on windows (e836bc12c16996d0d83d585cd8ca2b1a)] -&gt; xpath: //div[contains(@class, 'jsx-165692325') and contains(@class, 'jsx-2813139842') and contains(@class, 'normal-class')]
+]" width="0"/>
+                <img src="8426a935ef45a9982a0ec8b2782f90554df8b1fc336216a327f89d2496ecb592.png" title=" Jorge clicks on [[EdgeDriver: MicrosoftEdge on windows (e836bc12c16996d0d83d585cd8ca2b1a)] -&gt; xpath: //div[contains(@class, 'jsx-165692325') and contains(@class, 'jsx-2813139842') and contains(@class, 'normal-class')]
+] (completed)" width="0"/>
+                <img src="5fd015e9909f932a942c1e0a82a2600dadb4635122d76f4281f7de5a948bfe37.png" title=" Jorge clicks on lista de productos" width="0"/>
+                <img src="d1caa614670116a5af7cbde88925d9b2e0ef3ad86cc22667b2966c8b528829bd.png" title=" Jorge clicks on lista de productos (completed)" width="0"/>
+                <img src="d11b53ca1d0f53f826c468bc1733aeee24acef938ad29aeea3557a103682c4ab.png" title=" Jorge clicks on cerrar alerta de confirmacion" width="0"/>
+                <img src="e2905df7380191eb2973035de4e254638fc3268c6a32b59bccc96987b1e682c1.png" title=" Jorge clicks on cerrar alerta de confirmacion (completed)" width="0"/>
+                <img src="e2905df7380191eb2973035de4e254638fc3268c6a32b59bccc96987b1e682c1.png" title=" Jorge agregar al carrito (completed)" width="0"/>
+                <img src="e2905df7380191eb2973035de4e254638fc3268c6a32b59bccc96987b1e682c1.png" title=" Jorge ir al carrito" width="0"/>
+                <img src="e2905df7380191eb2973035de4e254638fc3268c6a32b59bccc96987b1e682c1.png" title=" Jorge clicks on Ir al carrito de compras" width="0"/>
+                <img src="9bf2af8aa7a4f9d13b13f6ca61d6daa5c6227dcd59b0373c3911f11c5fcce78d.png" title=" Jorge clicks on Ir al carrito de compras (completed)" width="0"/>
+                <img src="9bf2af8aa7a4f9d13b13f6ca61d6daa5c6227dcd59b0373c3911f11c5fcce78d.png" title=" Jorge ir al carrito (completed)" width="0"/>
+                <img src="9bf2af8aa7a4f9d13b13f6ca61d6daa5c6227dcd59b0373c3911f11c5fcce78d.png" title=" And lo selecciona y anade al carrito (completed)" width="0"/>
+                <img src="1e05217a76032ca3c44a6b8fe8d963fbb67e321a138c4c0ff13b1ce311eac6fc.png" title=" And procede al proceso de pago escogiendo Efecty como metodo de pago" width="0"/>
+                <img src="79ea2c42e1a8448ebdf12901b912acb16a2dd655bfef8d0d9769e3fcee5bec25.png" title=" Jorge ir confirmar compra" width="0"/>
+                <img src="79ea2c42e1a8448ebdf12901b912acb16a2dd655bfef8d0d9769e3fcee5bec25.png" title=" Jorge clicks on Continuar compra en carrito" width="0"/>
+                <img src="793feb22c511178cdf7c0f7aec914c1fa45e5ac70d0c3037a7a456989848580a.png" title=" Jorge clicks on Continuar compra en carrito (completed)" width="0"/>
+                <img src="793feb22c511178cdf7c0f7aec914c1fa45e5ac70d0c3037a7a456989848580a.png" title=" Jorge ir confirmar compra (completed)" width="0"/>
+                <img src="793feb22c511178cdf7c0f7aec914c1fa45e5ac70d0c3037a7a456989848580a.png" title=" Jorge confirmar compra" width="0"/>
+                <img src="60843e255e20c88d3d889f6fc8da66ef2bc09f4fd0d192021f94d1cf24cea019.png" title=" Jorge clicks on cerrar alerta que sale despues de confirmar carrito" width="0"/>
+                <img src="5acb770639b0dcb75ad29be9a7401272b18cec18e5449b219fd07e58f8f2c92b.png" title=" Jorge clicks on cerrar alerta que sale despues de confirmar carrito (completed)" width="0"/>
+                <img src="5acb770639b0dcb75ad29be9a7401272b18cec18e5449b219fd07e58f8f2c92b.png" title=" Jorge clicks on boton para continuar como invitado" width="0"/>
+                <img src="8c6b5c8f2a976b0fa9797fb0dc0285e7042099d4b323f80b5b3368f8624628ec.png" title=" Jorge clicks on boton para continuar como invitado (completed)" width="0"/>
+                <img src="8c6b5c8f2a976b0fa9797fb0dc0285e7042099d4b323f80b5b3368f8624628ec.png" title=" Jorge confirmar compra (completed)" width="0"/>
+                <img src="6b486d8f46f17973c0a250d0a142e9bef96a14c338e3e521fd98655f8a6b5b98.png" title=" Jorge mini formulario" width="0"/>
+                <img src="6b486d8f46f17973c0a250d0a142e9bef96a14c338e3e521fd98655f8a6b5b98.png" title=" Jorge clicks on despiegla la lista de departamento" width="0"/>
+                <img src="8497ff60d9ea268f779a730658463585b4b9b5da0117a5209425ac08cd925c56.png" title=" Jorge clicks on despiegla la lista de departamento (completed)" width="0"/>
+                <img src="8497ff60d9ea268f779a730658463585b4b9b5da0117a5209425ac08cd925c56.png" title=" Jorge enters 'Huila' into escribe ciudad o departamento o calle" width="0"/>
+                <img src="a05c5ead23ff7547e744ec5fd0b6772cc94648f6aee800048f79eb2cfbd02f06.png" title=" Jorge enters 'Huila' into escribe ciudad o departamento o calle (completed)" width="0"/>
+                <img src="a05c5ead23ff7547e744ec5fd0b6772cc94648f6aee800048f79eb2cfbd02f06.png" title=" Jorge clicks on selecciono departamento" width="0"/>
+                <img src="1dd8f614d828b2010709cd4eb53abd63d541583ba4c4ac2b233a9e5039ee9062.png" title=" Jorge clicks on selecciono departamento (completed)" width="0"/>
+                <img src="ec243f2097741665b70bb3f52a161e980e6e06613e833eebd4efa12f452aa58c.png" title=" Jorge clicks on Despliega la lista de ciudad" width="0"/>
+                <img src="696be5b64a42312766fb22da117d52b486697fd32a2226d28abcb15450e78074.png" title=" Jorge clicks on Despliega la lista de ciudad (completed)" width="0"/>
+                <img src="696be5b64a42312766fb22da117d52b486697fd32a2226d28abcb15450e78074.png" title=" Jorge enters 'Neiva' into escribe ciudad o departamento o calle" width="0"/>
+                <img src="03c5dd77796340acffa789782552d518b90fcf3da1dd41b6919b7a10285a82b7.png" title=" Jorge enters 'Neiva' into escribe ciudad o departamento o calle (completed)" width="0"/>
+                <img src="03c5dd77796340acffa789782552d518b90fcf3da1dd41b6919b7a10285a82b7.png" title=" Jorge clicks on selecciono departamento" width="0"/>
+                <img src="01df428f9fa84b14e98e9b450c64da25c5589aab07062ab24cf295fb00027df9.png" title=" Jorge clicks on selecciono departamento (completed)" width="0"/>
+                <img src="f5a8584e6bb52a05cbc6e100610112f4ac99ef4c1ec44219159f6a67d8418dbc.png" title=" Jorge clicks on Despliega la lista de ciudad" width="0"/>
+                <img src="9a55447ccaedb220765d7728c86ab62f84284e3efb7d5e4cda615b2a061e2194.png" title=" Jorge clicks on Despliega la lista de ciudad (completed)" width="0"/>
+                <img src="9a55447ccaedb220765d7728c86ab62f84284e3efb7d5e4cda615b2a061e2194.png" title=" Jorge enters 'Carrera' into escribe ciudad o departamento o calle" width="0"/>
+                <img src="5478779f92e2d83f361bec79b49fa44580f0cbed527e16f3347a55b3a4c923fd.png" title=" Jorge enters 'Carrera' into escribe ciudad o departamento o calle (completed)" width="0"/>
+                <img src="5478779f92e2d83f361bec79b49fa44580f0cbed527e16f3347a55b3a4c923fd.png" title=" Jorge clicks on selecciono departamento" width="0"/>
+                <img src="d118fc5a30576e0c7957abb48311ef86d48d2d1ccbddbcb0b06f065f987cab01.png" title=" Jorge clicks on selecciono departamento (completed)" width="0"/>
+                <img src="cc1503a4e0439640dc517866cca963473a4ea1888829b50226b38970bed12e23.png" title=" Jorge enters '2' into selecciono calle" width="0"/>
+                <img src="8aec5b0e9fa552e53981c1915f75e021360a9d24a9064e106d95f6670cb126e6.png" title=" Jorge enters '2' into selecciono calle (completed)" width="0"/>
+                <img src="bf207a631930dc1a16571095e02e5f202f1620637a23d0b5aa6de9af696716a9.png" title=" Jorge enters '2' into Escribe primer numero" width="0"/>
+                <img src="36260885d78c0113e3518b35ff728f8754beb42869e0d35033355d84091e6d79.png" title=" Jorge enters '2' into Escribe primer numero (completed)" width="0"/>
+                <img src="36260885d78c0113e3518b35ff728f8754beb42869e0d35033355d84091e6d79.png" title=" Jorge enters '22' into Escribe segundo numero" width="0"/>
+                <img src="425562ae0369afbde076a1a8575a553b99dd242975a844fe0460991514fa0a6e.png" title=" Jorge enters '22' into Escribe segundo numero (completed)" width="0"/>
+                <img src="425562ae0369afbde076a1a8575a553b99dd242975a844fe0460991514fa0a6e.png" title=" Jorge clicks on boton de usar esta direccion" width="0"/>
+                <img src="3e8eed5de1695412b2c33c2ac6bb7f25357d6c6518a7310282a4fa6352baa908.png" title=" Jorge clicks on boton de usar esta direccion (completed)" width="0"/>
+                <img src="b89e5c51dce079276ab4d3fab99ad9d67275245bfc980c324dd54f92d3265309.png" title=" Jorge clicks on boton de usar esta direccion" width="0"/>
+                <img src="8b5fb88b90e7867ad3003af2c9bc29854eca99bc94a1c1b7270cd98aa2d728f1.png" title=" Jorge clicks on boton de usar esta direccion (completed)" width="0"/>
+                <img src="8b5fb88b90e7867ad3003af2c9bc29854eca99bc94a1c1b7270cd98aa2d728f1.png" title=" Jorge mini formulario (completed)" width="0"/>
+                <img src="8b5fb88b90e7867ad3003af2c9bc29854eca99bc94a1c1b7270cd98aa2d728f1.png" title=" Jorge llenar datos entrega" width="0"/>
+                <img src="a9f7cc342d6f36f6e3b4c066f2f11cca3ef4d4db1172e9852f10ba731cf3787f.png" title=" Jorge clicks on boton de usar esta direccion" width="0"/>
+                <img src="6f97b7d3ae02471ce3b731a5b10081cca296982c058208dda832f380cfbcf130.png" title=" Jorge clicks on boton de usar esta direccion (completed)" width="0"/>
+                <img src="6f97b7d3ae02471ce3b731a5b10081cca296982c058208dda832f380cfbcf130.png" title=" Jorge clicks on boton de usar esta direccion" width="0"/>
+                <img src="32130af3ee408addb8cc461eb4bf33b359dc7db8644ba3293130e0d31fa5e2c2.png" title=" Jorge clicks on boton de usar esta direccion (completed)" width="0"/>
+                <img src="32130af3ee408addb8cc461eb4bf33b359dc7db8644ba3293130e0d31fa5e2c2.png" title=" Jorge clicks on boton de usar esta direccion" width="0"/>
+                <img src="91763df1f23e006319446d7102a4a95e8251647401bf6424cbf33d9b49f7649c.png" title=" Jorge clicks on boton de usar esta direccion (completed)" width="0"/>
+                <img src="10f1fd07ed3c724ed2f9b7982a0225116806ccbb96fb56cbd181f9f579fc5349.png" title=" Jorge clicks on boton de usar esta direccion" width="0"/>
+                <img src="a5ef64bd57fc0343f5ab31f4564f3161b2245b33821c15694da2f47243601bba.png" title=" Jorge clicks on boton de usar esta direccion (completed)" width="0"/>
+                <img src="a5ef64bd57fc0343f5ab31f4564f3161b2245b33821c15694da2f47243601bba.png" title=" Jorge llenar datos entrega (completed)" width="0"/>
+                <img src="a5ef64bd57fc0343f5ab31f4564f3161b2245b33821c15694da2f47243601bba.png" title=" Jorge seleccion metodo" width="0"/>
+                <img src="5dcf3e0f3f8e0a1f5c10d5c3515082c2dbefdcd62609f0d1bc642e48a463cd26.png" title=" Jorge clicks on Senal de metodos de pago" width="0"/>
+                <img src="eed0fa159c8106500b9d8931486bdbece9fdd9ed059ce62dcb89a4c948b08899.png" title=" Jorge clicks on Senal de metodos de pago (completed)" width="0"/>
+                <img src="eed0fa159c8106500b9d8931486bdbece9fdd9ed059ce62dcb89a4c948b08899.png" title=" Jorge clicks on Confirmar metodo de pago Efecty" width="0"/>
+                <img src="784e4d984b115925edeccdfb37bb84cbd51e5b1f7c7f2903d7dcaf418acc6c5c.png" title=" Jorge clicks on Confirmar metodo de pago Efecty (completed)" width="0"/>
+                <img src="784e4d984b115925edeccdfb37bb84cbd51e5b1f7c7f2903d7dcaf418acc6c5c.png" title=" Jorge seleccion metodo (completed)" width="0"/>
+                <img src="784e4d984b115925edeccdfb37bb84cbd51e5b1f7c7f2903d7dcaf418acc6c5c.png" title=" Jorge llenar formulario pago" width="0"/>
+                <img src="784e4d984b115925edeccdfb37bb84cbd51e5b1f7c7f2903d7dcaf418acc6c5c.png" title=" Jorge enters 'Pacho' into Confirmar metodo de pago Efecty" width="0"/>
+                <img src="5843fed127249bf26beb4122464362bf26c656b7a2be0204ea7154b70ff9ba25.png" title=" Jorge enters 'Pacho' into Confirmar metodo de pago Efecty (completed)" width="0"/>
+                <img src="5843fed127249bf26beb4122464362bf26c656b7a2be0204ea7154b70ff9ba25.png" title=" Jorge enters 'Cucuta' into Confirmar metodo de pago Efecty" width="0"/>
+                <img src="8730f0ac9620cdc2a58989afbcce0f9e10a97b8e9ef02cc0e7426ea372255561.png" title=" Jorge enters 'Cucuta' into Confirmar metodo de pago Efecty (completed)" width="0"/>
+                <img src="8730f0ac9620cdc2a58989afbcce0f9e10a97b8e9ef02cc0e7426ea372255561.png" title=" Jorge enters '1222333' into Confirmar metodo de pago Efecty" width="0"/>
+                <img src="178c4baf2320daa83b4f32c2a5c627e4876166f3d411b2d00a0e143990a3a518.png" title=" Jorge enters '1222333' into Confirmar metodo de pago Efecty (completed)" width="0"/>
+                <img src="178c4baf2320daa83b4f32c2a5c627e4876166f3d411b2d00a0e143990a3a518.png" title=" Jorge enters '3001112233' into Confirmar metodo de pago Efecty" width="0"/>
+                <img src="954cebcbea3c426d629b387705e7723cbc3416af2ee8b76c9fd9f778a225e164.png" title=" Jorge enters '3001112233' into Confirmar metodo de pago Efecty (completed)" width="0"/>
+                <img src="954cebcbea3c426d629b387705e7723cbc3416af2ee8b76c9fd9f778a225e164.png" title=" Jorge enters 'pacho@gmail.com' into Confirmar metodo de pago Efecty" width="0"/>
+                <img src="19a5e0716521468e7db82b5b48fba67b0d4a7c91d6ec405c57dd40d40fcdd918.png" title=" Jorge enters 'pacho@gmail.com' into Confirmar metodo de pago Efecty (completed)" width="0"/>
+                <img src="19a5e0716521468e7db82b5b48fba67b0d4a7c91d6ec405c57dd40d40fcdd918.png" title=" Jorge clicks on Confirmar metodo de pago Efecty" width="0"/>
+                <img src="bbceb5f41608dcfe52739496e0e0b7e965df2354391fd32eab82edf9992477c0.png" title=" Jorge clicks on Confirmar metodo de pago Efecty (completed)" width="0"/>
+                <img src="bbceb5f41608dcfe52739496e0e0b7e965df2354391fd32eab82edf9992477c0.png" title=" Jorge clicks on Confirmar metodo de pago Efecty" width="0"/>
+                <img src="a0b1396e79d496aa3eb6345082b70a99faf79d7268ce3aa3cd782ac718cf8a0e.png" title=" Jorge clicks on Confirmar metodo de pago Efecty (completed)" width="0"/>
+                <img src="a0b1396e79d496aa3eb6345082b70a99faf79d7268ce3aa3cd782ac718cf8a0e.png" title=" Jorge clicks on Confirmar metodo de pago Efecty" width="0"/>
+                <img src="a93c59e4f681032a61db89fce6b430258b0646034b96d9d7bdb4b1cce6963cc1.png" title=" Jorge clicks on Confirmar metodo de pago Efecty (completed)" width="0"/>
+                <img src="a93c59e4f681032a61db89fce6b430258b0646034b96d9d7bdb4b1cce6963cc1.png" title=" Jorge clicks on Confirmar metodo de pago Efecty" width="0"/>
+                <img src="54d72e4eb61574a22420a5674eac1885f0f9db7293f00e21c64aef5ee08cec0f.png" title=" Jorge clicks on Confirmar metodo de pago Efecty (completed)" width="0"/>
+                <img src="54d72e4eb61574a22420a5674eac1885f0f9db7293f00e21c64aef5ee08cec0f.png" title=" Jorge clicks on Confirmar metodo de pago Efecty" width="0"/>
+                <img src="90559c3d732a0cb6d5f0cb762dc5ce75fb5a4d04c666cb9c7cd1157a8a4eeaf1.png" title=" Jorge clicks on Confirmar metodo de pago Efecty (completed)" width="0"/>
+                <img src="d6e8143a68f52da14c86376d4c08a6240691a31a90980fbf42d1501a87e9145f.png" title=" Jorge clicks on Mensaje de confirmacion" width="0"/>
+                <img src="d6e8143a68f52da14c86376d4c08a6240691a31a90980fbf42d1501a87e9145f.png" title=" Jorge llenar formulario pago (completed)" width="0"/>
+                <img src="d6e8143a68f52da14c86376d4c08a6240691a31a90980fbf42d1501a87e9145f.png" title=" And procede al proceso de pago escogiendo Efecty como metodo de pago (completed)" width="0"/>
+                <img src="d6e8143a68f52da14c86376d4c08a6240691a31a90980fbf42d1501a87e9145f.png" title=" Then deberia recibir una confirmacion de compra exitosa por Efecty" width="0"/>
+
+                <img src="d6e8143a68f52da14c86376d4c08a6240691a31a90980fbf42d1501a87e9145f.png" title=" Then verificar confirmacion compra should be a string containing '&iexcl;Pacho, gracias por preferirnos!': <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.46</span>
+</div>
+</body>
+</html>
