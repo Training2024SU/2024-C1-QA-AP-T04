@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="1a865393e764f6a3d06e99e210fdcba311820591b31fb5855c2dbcf907ddca4c.html">Buy Products And Register</a></span>
+                > <span class="truncate-60"><a
+                    href="b143adefaffce7046343606ccbdbe49570399905ecdd42af665ee6df7104a0ac.html">Buy 3 products with Efecty and register a new account </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 19-05-2024 15:52</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Buy Products And Register </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                I as the user of the web page Koaj<br />
+want to be able to Register and Buy products<br />
+For having access to the services and deliveries of the webpage
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6c5512236937b92cd7a296b24edb966c2bd94be46b8910f8b129a42d6150eb25.html">1 To 10 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="90e815fdcf75a910c16397b907249dee6d0ad693df5c175755f7cbff00a1718e.html">Happy End
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Buy 3 products with Efecty and register a new account
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="3c688e3a4adeea29600a2867781804c57bb37ea0ebc00942a43af34050b4756d.png" title=" Given The user &lt;name&gt; is in the Web page &quot;https://www.koaj.co/&quot;" width="0"/>
+                <img src="3c688e3a4adeea29600a2867781804c57bb37ea0ebc00942a43af34050b4756d.png" title=" Jorge open main page" width="0"/>
+                <img src="3c688e3a4adeea29600a2867781804c57bb37ea0ebc00942a43af34050b4756d.png" title=" jorge opens the browser at https://www.koaj.co/" width="0"/>
+                <img src="a34364ed5dd382c8cc2e64dd5821ca9c9cfca687df98806307409d5ad939bd7e.png" title=" jorge opens the browser at https://www.koaj.co/ (completed)" width="0"/>
+                <img src="a34364ed5dd382c8cc2e64dd5821ca9c9cfca687df98806307409d5ad939bd7e.png" title=" Jorge open main page (completed)" width="0"/>
+                <img src="a34364ed5dd382c8cc2e64dd5821ca9c9cfca687df98806307409d5ad939bd7e.png" title=" Given The user &lt;name&gt; is in the Web page &quot;https://www.koaj.co/&quot; (completed)" width="0"/>
+                <img src="dd1ac8ce4c34faba3371ee8b78f91c8d137562e45f40a81000ce088fca2c0738.png" title=" When Registers and start session with the user information" width="0"/>
+                <img src="dd1ac8ce4c34faba3371ee8b78f91c8d137562e45f40a81000ce088fca2c0738.png" title=" Jorge redirect register" width="0"/>
+                <img src="dd1ac8ce4c34faba3371ee8b78f91c8d137562e45f40a81000ce088fca2c0738.png" title=" jorge clicks on boton inicio de sesion" width="0"/>
+                <img src="dd1ac8ce4c34faba3371ee8b78f91c8d137562e45f40a81000ce088fca2c0738.png" title=" Jorge redirect register (completed)" width="0"/>
+                <img src="dd1ac8ce4c34faba3371ee8b78f91c8d137562e45f40a81000ce088fca2c0738.png" title=" Jorge open register form" width="0"/>
+                <img src="dd1ac8ce4c34faba3371ee8b78f91c8d137562e45f40a81000ce088fca2c0738.png" title=" jorge clicks on Register Button" width="0"/>
+                <img src="51d70b55facada3b34a5344ec5329f3c5f157df000a8f652c0ceaa56c3ec42b6.png" title=" jorge clicks on Register Button (completed)" width="0"/>
+                <img src="51d70b55facada3b34a5344ec5329f3c5f157df000a8f652c0ceaa56c3ec42b6.png" title=" Jorge open register form (completed)" width="0"/>
+                <img src="51d70b55facada3b34a5344ec5329f3c5f157df000a8f652c0ceaa56c3ec42b6.png" title=" Jorge fill register form" width="0"/>
+                <img src="51d70b55facada3b34a5344ec5329f3c5f157df000a8f652c0ceaa56c3ec42b6.png" title=" jorge clicks on male gender option" width="0"/>
+                <img src="3a39e1916d6961d4ffe20b0129d138e8c4a7e77b072f4f82138862b5ba79f8c2.png" title=" jorge clicks on male gender option (completed)" width="0"/>
+                <img src="3a39e1916d6961d4ffe20b0129d138e8c4a7e77b072f4f82138862b5ba79f8c2.png" title=" jorge enters 'Alvaro',ENTER into First Name Field" width="0"/>
+                <img src="3db1d7ab1021bc0108b256b80f24db246cb2a6fbeb7ec91dc38c3bcbcb40f927.png" title=" jorge enters 'Alvaro',ENTER into First Name Field (completed)" width="0"/>
+                <img src="3db1d7ab1021bc0108b256b80f24db246cb2a6fbeb7ec91dc38c3bcbcb40f927.png" title=" jorge enters 'Gutmann' into Last name field" width="0"/>
+                <img src="b8218479368de3c41a985e30bb6dd46f6ceefb873b32dd2d8adfcd233e0ff34d.png" title=" jorge enters 'Gutmann' into Last name field (completed)" width="0"/>
+                <img src="b8218479368de3c41a985e30bb6dd46f6ceefb873b32dd2d8adfcd233e0ff34d.png" title=" jorge enters 'shenna.leannon@gmail.com' into email field" width="0"/>
+                <img src="e4c4599cfe36c7f6c9beeca209fcd0e9e68645538a52068e959b9758a6852691.png" title=" jorge enters 'shenna.leannon@gmail.com' into email field (completed)" width="0"/>
+                <img src="e4c4599cfe36c7f6c9beeca209fcd0e9e68645538a52068e959b9758a6852691.png" title=" jorge enters '52738919831' into password field" width="0"/>
+                <img src="3e59abe40d4a88709ee332528c5e4c78d51525e60bd44794421ad84c66d24f17.png" title=" jorge enters '52738919831' into password field (completed)" width="0"/>
+                <img src="3e59abe40d4a88709ee332528c5e4c78d51525e60bd44794421ad84c66d24f17.png" title=" jorge enters '52738919831' into Repeat password field" width="0"/>
+                <img src="757014f0e0379c242e73fe30c8a30d48972a0717135a2affca9858e9dfd88059.png" title=" jorge enters '52738919831' into Repeat password field (completed)" width="0"/>
+                <img src="757014f0e0379c242e73fe30c8a30d48972a0717135a2affca9858e9dfd88059.png" title=" jorge selects #value in Document type select" width="0"/>
+                <img src="73c9c12db1113a5d67798e7242bc7284a15c58ddd2b101353170b04eb4edcc92.png" title=" jorge selects #value in Document type select (completed)" width="0"/>
+                <img src="73c9c12db1113a5d67798e7242bc7284a15c58ddd2b101353170b04eb4edcc92.png" title=" jorge selects #value in Document type select" width="0"/>
+                <img src="468eaba6ab1981d516899257d15130d3c7d973d5af9694a7de7c0df0f3e23f1b.png" title=" jorge selects #value in Document type select (completed)" width="0"/>
+                <img src="468eaba6ab1981d516899257d15130d3c7d973d5af9694a7de7c0df0f3e23f1b.png" title=" jorge selects #value in Document type select" width="0"/>
+                <img src="3065b2aefac19db0a18c8997b5617639c901b8f3a9afb44a036c821de4fa39a1.png" title=" jorge selects #value in Document type select (completed)" width="0"/>
+                <img src="3065b2aefac19db0a18c8997b5617639c901b8f3a9afb44a036c821de4fa39a1.png" title=" jorge selects #value in Document type select" width="0"/>
+                <img src="b69249b5164bb95ae0d23556d32be7812802631720623e188b178362034c6916.png" title=" jorge selects #value in Document type select (completed)" width="0"/>
+                <img src="b69249b5164bb95ae0d23556d32be7812802631720623e188b178362034c6916.png" title=" jorge enters '13412868769' into Id client information" width="0"/>
+                <img src="b3bac4d835368e813de003b60901b541760ccfc631362bd595ffbfe8e84cc72f.png" title=" jorge enters '13412868769' into Id client information (completed)" width="0"/>
+                <img src="2ac5d53092a532a72e3a027d4615d02bdeb3327c8fc7523d6f885c2e76f5d9d8.png" title=" jorge clicks on Document type select" width="0"/>
+                <img src="1729e020680da08b7d8287e1e3f6c3a73d9849e8027dc6470402fa50bb4a7abc.png" title=" jorge clicks on Document type select (completed)" width="0"/>
+                <img src="1729e020680da08b7d8287e1e3f6c3a73d9849e8027dc6470402fa50bb4a7abc.png" title=" jorge enters '3126883630' into phone number field" width="0"/>
+                <img src="c0dd1cf9949bc7b649bc2cea8fd9acf35037d38e8fe3893e9254e9fcba7acb8b.png" title=" jorge enters '3126883630' into phone number field (completed)" width="0"/>
+                <img src="c0dd1cf9949bc7b649bc2cea8fd9acf35037d38e8fe3893e9254e9fcba7acb8b.png" title=" jorge enters '411 Bernarda Summit, Port Everettside, VA 00870' into address field" width="0"/>
+                <img src="cf1af042a88400ab1bea3d84f27cc6d9863ce17ba6cbd01288dcd0f9fabfe2e6.png" title=" jorge enters '411 Bernarda Summit, Port Everettside, VA 00870' into address field (completed)" width="0"/>
+                <img src="cf1af042a88400ab1bea3d84f27cc6d9863ce17ba6cbd01288dcd0f9fabfe2e6.png" title=" jorge selects #value in country option is only colombia" width="0"/>
+                <img src="cf1af042a88400ab1bea3d84f27cc6d9863ce17ba6cbd01288dcd0f9fabfe2e6.png" title=" jorge selects #value in country option is only colombia" width="0"/>
+                <img src="29fa7338859ade4771ba59363e482a2ea863b954ed8b79d2697a84cccef356cf.png" title=" jorge selects #value in country option is only colombia (completed)" width="0"/>
+                <img src="29fa7338859ade4771ba59363e482a2ea863b954ed8b79d2697a84cccef356cf.png" title=" jorge selects #value in country option is only colombia" width="0"/>
+                <img src="183cf841ebf3f29cc94301edbb15858c5a976888dbcc4ee103b05db71b289da1.png" title=" jorge selects #value in country option is only colombia (completed)" width="0"/>
+                <img src="183cf841ebf3f29cc94301edbb15858c5a976888dbcc4ee103b05db71b289da1.png" title=" jorge clicks on Check box terms and conditions" width="0"/>
+                <img src="cc21be5aeed677d81ca230cc9a9e32e3800b926944e9230a9e4f3aac0f17ee45.png" title=" jorge clicks on Check box terms and conditions (completed)" width="0"/>
+                <img src="cc21be5aeed677d81ca230cc9a9e32e3800b926944e9230a9e4f3aac0f17ee45.png" title=" jorge clicks on Check box store policies" width="0"/>
+                <img src="601bd0702f6c90422f016334910b9d5588da19661879d4716debda3ae9f6c41f.png" title=" jorge clicks on Check box store policies (completed)" width="0"/>
+                <img src="5de65b879b930c210299b58b503997f1f5b10623d334b6090638574f67fe0fda.png" title=" jorge clicks on Submit new register" width="0"/>
+                <img src="fb5a38bc892cb313f8794212d0d3dbb9e130bb09a4618a161f406cdb3e882b20.png" title=" jorge clicks on Submit new register (completed)" width="0"/>
+                <img src="fb5a38bc892cb313f8794212d0d3dbb9e130bb09a4618a161f406cdb3e882b20.png" title=" Jorge fill register form (completed)" width="0"/>
+                <img src="fb5a38bc892cb313f8794212d0d3dbb9e130bb09a4618a161f406cdb3e882b20.png" title=" When Registers and start session with the user information (completed)" width="0"/>
+                <img src="4905ec011cce92529083e1464310822281daf4ec24a830ae306af69cd3097578.png" title=" And select the products and add them to the Car
+| Buzo unicolor con acabados en rib, bolsillo y capota |
+| Tenis planos unicolores con texturas perforadas |" width="0"/>
+                <img src="4905ec011cce92529083e1464310822281daf4ec24a830ae306af69cd3097578.png" title=" Jorge search product" width="0"/>
+                <img src="4905ec011cce92529083e1464310822281daf4ec24a830ae306af69cd3097578.png" title=" jorge clicks on Main Search bar" width="0"/>
+                <img src="196801ca86f405548da4c3ca1adce8650fb2f3deb714ad5242b6b0a61586e123.png" title=" jorge enters 'Buzo unicolor con acabados en rib, bolsillo y capota',ENTER into Second Search bar" width="0"/>
+                <img src="00354a1d0b9785c2c50755ab03c2853555d4460ce865399390629cf299a07b0a.png" title=" jorge enters 'Buzo unicolor con acabados en rib, bolsillo y capota',ENTER into Second Search bar (completed)" width="0"/>
+                <img src="814d8fc559042cd3a7ab65456182659766809a269c26cd9c31812d54297b2443.png" title=" jorge clicks on First result of the search" width="0"/>
+                <img src="fb4368cfc62d870521b8e6c5b237704b57331569536f2c29f735511fcf7aeaed.png" title=" jorge clicks on First result of the search (completed)" width="0"/>
+                <img src="fb4368cfc62d870521b8e6c5b237704b57331569536f2c29f735511fcf7aeaed.png" title=" Jorge search product (completed)" width="0"/>
+                <img src="c0a222c4752fc825dc665b61397d66d916c3de27144c58b8f6f871befce51f18.png" title=" Jorge add to car" width="0"/>
+                <img src="c84259ef21be79bc147026ca1f1e6373cd1ac4b8c809ba38166c0249fb2f2195.png" title=" jorge clicks on Submit to the car" width="0"/>
+                <img src="922ac0605ebfbe5bb599a17b4fced5cc3f49d9fae836b95455fc4937eed17601.png" title=" jorge clicks on Submit to the car (completed)" width="0"/>
+                <img src="922ac0605ebfbe5bb599a17b4fced5cc3f49d9fae836b95455fc4937eed17601.png" title=" Jorge add to car (completed)" width="0"/>
+                <img src="922ac0605ebfbe5bb599a17b4fced5cc3f49d9fae836b95455fc4937eed17601.png" title=" Jorge redirect main page" width="0"/>
+                <img src="b7669d37743cc412e86c8ff1ed77da52af430486f742f8263b19fa8daacfbcb6.png" title=" jorge clicks on Boton main menu" width="0"/>
+                <img src="0b040f2d20dbcd31172970d9d7fee1752b32fa366b91933d801d92f28607496e.png" title=" jorge clicks on Boton main menu (completed)" width="0"/>
+                <img src="0b040f2d20dbcd31172970d9d7fee1752b32fa366b91933d801d92f28607496e.png" title=" Jorge redirect main page (completed)" width="0"/>
+                <img src="61b3daa9ee2f88e713bcfe02dc62bcc25d73e27f2dccb50cbcc86e3802792377.png" title=" Jorge search product" width="0"/>
+                <img src="61b3daa9ee2f88e713bcfe02dc62bcc25d73e27f2dccb50cbcc86e3802792377.png" title=" jorge clicks on Main Search bar" width="0"/>
+                <img src="09bdc73e36f4a9af1fb68bbe52b2f60d69cbd611531c41a65fc2ae9d5eea0f93.png" title=" jorge clicks on Main Search bar (completed)" width="0"/>
+                <img src="de17f679ef8b966cea96eef678dbd9c2c79617bf1df873180e820101c881c771.png" title=" jorge enters 'Tenis planos unicolores con texturas perforadas',ENTER into Second Search bar" width="0"/>
+                <img src="46b6301b68274b8ec1830b6915f2b62e3711068c041c453502dde07f42dc83c6.png" title=" jorge enters 'Tenis planos unicolores con texturas perforadas',ENTER into Second Search bar (completed)" width="0"/>
+                <img src="16a3bd9bc2f2fd1ab090d0610ff10be4953e6a5ae0de3f5fde881c7fafe3f76b.png" title=" jorge clicks on First result of the search" width="0"/>
+                <img src="175762185ab6ba6a36df79305ab5c86fc2b8e1f24a9d0062e9a7474f78340c48.png" title=" jorge clicks on First result of the search (completed)" width="0"/>
+                <img src="175762185ab6ba6a36df79305ab5c86fc2b8e1f24a9d0062e9a7474f78340c48.png" title=" Jorge search product (completed)" width="0"/>
+                <img src="2c05078584903409d23f1e48c72e572c2c631d97df16a443e33406fe7b5f946d.png" title=" Jorge add to car" width="0"/>
+                <img src="2c05078584903409d23f1e48c72e572c2c631d97df16a443e33406fe7b5f946d.png" title=" jorge clicks on Submit to the car" width="0"/>
+                <img src="1fb2f7b89fd2e43fe2293d550325be8b233ca20cf7b252f5ca69e7bb15ab9d77.png" title=" jorge clicks on Submit to the car (completed)" width="0"/>
+                <img src="1fb2f7b89fd2e43fe2293d550325be8b233ca20cf7b252f5ca69e7bb15ab9d77.png" title=" Jorge add to car (completed)" width="0"/>
+                <img src="1fb2f7b89fd2e43fe2293d550325be8b233ca20cf7b252f5ca69e7bb15ab9d77.png" title=" Jorge redirect main page" width="0"/>
+                <img src="d566377716437f157d069189bf08d57a0915703792b1101f603045b4f040086e.png" title=" jorge clicks on Boton main menu" width="0"/>
+                <img src="db0bd9e7b36b465bc357e8b950aaee1871b30e14ed62cb78d61284878ab9033f.png" title=" jorge clicks on Boton main menu (completed)" width="0"/>
+                <img src="db0bd9e7b36b465bc357e8b950aaee1871b30e14ed62cb78d61284878ab9033f.png" title=" Jorge redirect main page (completed)" width="0"/>
+                <img src="2dac126b3c5d14eb8e334371fcb3a016f1199a642204aec08187ed100f5fd97b.png" title=" And select the products and add them to the Car
+| Buzo unicolor con acabados en rib, bolsillo y capota |
+| Tenis planos unicolores con texturas perforadas | (completed)" width="0"/>
+                <img src="6b1fc23d61c4f5171dd3210a82da99f2ac852164e5e4605bd0dcc09b5d9f6de3.png" title=" And Redirects to the car" width="0"/>
+                <img src="6b1fc23d61c4f5171dd3210a82da99f2ac852164e5e4605bd0dcc09b5d9f6de3.png" title=" Jorge redirect to car" width="0"/>
+                <img src="6b1fc23d61c4f5171dd3210a82da99f2ac852164e5e4605bd0dcc09b5d9f6de3.png" title=" jorge clicks on Boton main menu" width="0"/>
+                <img src="6b1fc23d61c4f5171dd3210a82da99f2ac852164e5e4605bd0dcc09b5d9f6de3.png" title=" jorge clicks on Boton main menu" width="0"/>
+                <img src="5704c6d282194a0c6b92e449e53f81d21c5e497c73f3d023f755111ea96d8b49.png" title=" jorge clicks on Boton main menu (completed)" width="0"/>
+                <img src="5704c6d282194a0c6b92e449e53f81d21c5e497c73f3d023f755111ea96d8b49.png" title=" Jorge redirect to car (completed)" width="0"/>
+                <img src="5704c6d282194a0c6b92e449e53f81d21c5e497c73f3d023f755111ea96d8b49.png" title=" And Redirects to the car (completed)" width="0"/>
+                <img src="b104b6d6e2b5a9f472e48e7e5001e54fee00dc7c135ddea76eaa91eff98c74ae.png" title=" And confirm the pickup direction" width="0"/>
+                <img src="b104b6d6e2b5a9f472e48e7e5001e54fee00dc7c135ddea76eaa91eff98c74ae.png" title=" Jorge choose pick up location" width="0"/>
+                <img src="b104b6d6e2b5a9f472e48e7e5001e54fee00dc7c135ddea76eaa91eff98c74ae.png" title=" jorge clicks on Pickup product option" width="0"/>
+                <img src="b104b6d6e2b5a9f472e48e7e5001e54fee00dc7c135ddea76eaa91eff98c74ae.png" title=" jorge enters 'Bogota' into Search Field pickup" width="0"/>
+                <img src="b0894c5936d9f954bf6d81e19c9dcbdbcb501dd3bf6404d719a14b2f666a728c.png" title=" jorge enters 'Bogota' into Search Field pickup (completed)" width="0"/>
+                <img src="b0894c5936d9f954bf6d81e19c9dcbdbcb501dd3bf6404d719a14b2f666a728c.png" title=" jorge clicks on [By.xpath: //ul[@id='_sd_user_location_popup__stores-list']//*[contains(text(),'BOGOTA')]]" width="0"/>
+                <img src="71d942559672fa3aac631745d5cc1a5d8d0b5e117b2c493f75dd71aee0a3a10a.png" title=" jorge clicks on [By.xpath: //ul[@id='_sd_user_location_popup__stores-list']//*[contains(text(),'BOGOTA')]] (completed)" width="0"/>
+                <img src="71d942559672fa3aac631745d5cc1a5d8d0b5e117b2c493f75dd71aee0a3a10a.png" title=" jorge clicks on Search Field pickup" width="0"/>
+                <img src="905d93c8d0d4586004e5bbacda0832caeeaec342dfde0ebc6c612ee21db2f2e6.png" title=" jorge clicks on Search Field pickup (completed)" width="0"/>
+                <img src="905d93c8d0d4586004e5bbacda0832caeeaec342dfde0ebc6c612ee21db2f2e6.png" title=" Jorge choose pick up location (completed)" width="0"/>
+                <img src="905d93c8d0d4586004e5bbacda0832caeeaec342dfde0ebc6c612ee21db2f2e6.png" title=" And confirm the pickup direction (completed)" width="0"/>
+                <img src="1065c42b6abfbc9c27d0dd5057e283649b923e3bb7eabff715f3db2923dd0549.png" title=" And confirm the payment method" width="0"/>
+                <img src="1065c42b6abfbc9c27d0dd5057e283649b923e3bb7eabff715f3db2923dd0549.png" title=" Jorge confirm check box payment terms" width="0"/>
+                <img src="1065c42b6abfbc9c27d0dd5057e283649b923e3bb7eabff715f3db2923dd0549.png" title=" jorge clicks on Check box terms and conditions for payment" width="0"/>
+                <img src="1065c42b6abfbc9c27d0dd5057e283649b923e3bb7eabff715f3db2923dd0549.png" title=" Jorge confirm check box payment terms (completed)" width="0"/>
+                <img src="0954ce8ff2eec82a6ba69dcf5ec7c6ad3da3f90dc5a11b637eb158a066cda84b.png" title=" Jorge confirm payment method" width="0"/>
+                <img src="0dd0e0beaae2b820cabd03595c8c6e9348446e20153e8ec144f618e0c11c6399.png" title=" jorge clicks on Payco payment option" width="0"/>
+                <img src="e241a55409b2afa027832addb0128d4ce222f4416e0aa05ec18df64e9e047abe.png" title=" jorge clicks on Payco payment option (completed)" width="0"/>
+                <img src="e241a55409b2afa027832addb0128d4ce222f4416e0aa05ec18df64e9e047abe.png" title=" Jorge confirm payment method (completed)" width="0"/>
+                <img src="b01511e38e97590ff2601dee9e30f993fc33b0786e858532170932c8a39e31e5.png" title=" Jorge generate payment number payco" width="0"/>
+                <img src="5b7be8859392fae79065a0b7f146b75849a9e888885d3241b5c28fc980c6c7b4.png" title=" jorge clicks on Check box terms and conditions for payment" width="0"/>
+                <img src="c9502653b6b958be1e70336b9c3d38bf42354e636c8145dc9163364744b2eb98.png" title=" jorge clicks on Check box terms and conditions for payment (completed)" width="0"/>
+                <img src="c9502653b6b958be1e70336b9c3d38bf42354e636c8145dc9163364744b2eb98.png" title=" Jorge generate payment number payco (completed)" width="0"/>
+                <img src="c9502653b6b958be1e70336b9c3d38bf42354e636c8145dc9163364744b2eb98.png" title=" And confirm the payment method (completed)" width="0"/>
+                <img src="c9502653b6b958be1e70336b9c3d38bf42354e636c8145dc9163364744b2eb98.png" title=" Then it should go to the order confirmation" width="0"/>
+                <img src="c9502653b6b958be1e70336b9c3d38bf42354e636c8145dc9163364744b2eb98.png" title=" Then confirmation message payco should be 'SOLO FALTA UN PASO'" width="0"/>
+                <img src="8a7c021f40dec9fdb216d738eeca57f63b8d05bf41633d5a2dde06d067570539.png" title=" And be able to download the payment code" width="0"/>
+                <img src="8a7c021f40dec9fdb216d738eeca57f63b8d05bf41633d5a2dde06d067570539.png" title=" Then downlable receipt payco should be (true)" width="0"/>
+
+                <img src="8a7c021f40dec9fdb216d738eeca57f63b8d05bf41633d5a2dde06d067570539.png" title=" And be able to download the payment code (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.46</span>
+</div>
+</body>
+</html>
