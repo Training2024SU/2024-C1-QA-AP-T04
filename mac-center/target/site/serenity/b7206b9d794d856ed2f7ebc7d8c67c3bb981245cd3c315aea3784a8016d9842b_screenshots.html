@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="73f89d7a84fca7ece420eea35f0502cffac836e01d48359384634333cf297d13.html">Purchase Items On Mac-Center.com</a></span>
+                > <span class="truncate-60"><a
+                    href="b7206b9d794d856ed2f7ebc7d8c67c3bb981245cd3c315aea3784a8016d9842b.html">Successfully purchase items using BBVA </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 19-05-2024 22:26</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Purchase Items On Mac-Center.com </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a user of the mac-center.com platform<br />
+I want to buy various items<br />
+So that I can enjoy and use them
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="a010d50df0adde8fc08d1eed360b3235878dd191b37f1337aec863c7ad9f8776.html">Web Bbva
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="5698da923f295f46ce5ab64ced2311fc60caa4e36b32112606d3adcfdce3f60b.html">30 To 60 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Successfully purchase items using BBVA
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given the user is on the mac-center.com platform using "&lt;webBrowser&gt;"<br>When adds the following items to the cart<br><table class='embedded'><tbody><tr><td>Iphone 13</td></tr><tr><td>Macbook pro</td></tr><tr><td>Airpods</td></tr></tbody></table><br>And goes to the cart<br>And confirms their credentials using bbva payment method<br>Then should see its information in the card<br>And should be able to confirm the payment</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="b1862880f14d46ee09e839aeadffcd93096e9c72d459d05e2211c5214cae0c27.png" title=" 1: Successfully purchase items using BBVA ({webBrowser=chrome})" width="0"/>
+                <img src="b1862880f14d46ee09e839aeadffcd93096e9c72d459d05e2211c5214cae0c27.png" title=" Given the user is on the mac-center.com platform using &quot;chrome&quot;" width="0"/>
+                <img src="b1862880f14d46ee09e839aeadffcd93096e9c72d459d05e2211c5214cae0c27.png" title=" Johan open main" width="0"/>
+                <img src="b1862880f14d46ee09e839aeadffcd93096e9c72d459d05e2211c5214cae0c27.png" title=" Johan opens the browser at https://mac-center.com/" width="0"/>
+                <img src="2a81f8f066e96e8d27a522a6f73f0f29ff5b787d466c08cffdc2b7c9fb3995c7.png" title=" Johan opens the browser at https://mac-center.com/ (completed)" width="0"/>
+                <img src="2a81f8f066e96e8d27a522a6f73f0f29ff5b787d466c08cffdc2b7c9fb3995c7.png" title=" Johan open main (completed)" width="0"/>
+                <img src="2a81f8f066e96e8d27a522a6f73f0f29ff5b787d466c08cffdc2b7c9fb3995c7.png" title=" Given the user is on the mac-center.com platform using &quot;chrome&quot; (completed)" width="0"/>
+                <img src="2a81f8f066e96e8d27a522a6f73f0f29ff5b787d466c08cffdc2b7c9fb3995c7.png" title=" When adds the following items to the cart
+| Iphone 13 |
+| Macbook pro |
+| Airpods |" width="0"/>
+                <img src="2a81f8f066e96e8d27a522a6f73f0f29ff5b787d466c08cffdc2b7c9fb3995c7.png" title=" Johan search item" width="0"/>
+                <img src="2a81f8f066e96e8d27a522a6f73f0f29ff5b787d466c08cffdc2b7c9fb3995c7.png" title=" Johan clicks on the search box" width="0"/>
+                <img src="ef9de287f9306b2cb6d437cb13ef6afe3fd9148946cf38cce868ae47281417c0.png" title=" Johan clicks on the search box (completed)" width="0"/>
+                <img src="ef9de287f9306b2cb6d437cb13ef6afe3fd9148946cf38cce868ae47281417c0.png" title=" Johan enters 'Iphone 13',ENTER into the search box" width="0"/>
+                <img src="e024f3dbd9060fa2f3abca52603a5e604abc40f077bc4be85e560ad05a099fef.png" title=" Johan enters 'Iphone 13',ENTER into the search box (completed)" width="0"/>
+                <img src="8ff757dcef1ab939d465cd66b2127b7113ae812fa6ac5f6bd7977ac9e5e874bf.png" title=" Johan search item (completed)" width="0"/>
+                <img src="8ff757dcef1ab939d465cd66b2127b7113ae812fa6ac5f6bd7977ac9e5e874bf.png" title=" Johan add item to cart" width="0"/>
+                <img src="8ff757dcef1ab939d465cd66b2127b7113ae812fa6ac5f6bd7977ac9e5e874bf.png" title=" Johan clicks on [[ChromeDriver: chrome on windows (36542239d757ed3ba8740705b1b0da96)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']]" width="0"/>
+                <img src="e448bf343c02ab6bd6f953618d201c66ee691a07d7718e298278154b0626e137.png" title=" Johan clicks on [[ChromeDriver: chrome on windows (36542239d757ed3ba8740705b1b0da96)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']] (completed)" width="0"/>
+                <img src="1ff7939218f5ba24682539d2c7eea84c7bb94e7600525b4665f6923ba3bb2368.png" title=" Johan clicks on the close button" width="0"/>
+                <img src="013ca1fb9596ce3050ca630c8ae3d70f1c749a379d56e741918c5bef6afcde90.png" title=" Johan clicks on the close button (completed)" width="0"/>
+                <img src="013ca1fb9596ce3050ca630c8ae3d70f1c749a379d56e741918c5bef6afcde90.png" title=" Johan add item to cart (completed)" width="0"/>
+                <img src="013ca1fb9596ce3050ca630c8ae3d70f1c749a379d56e741918c5bef6afcde90.png" title=" Johan search item" width="0"/>
+                <img src="013ca1fb9596ce3050ca630c8ae3d70f1c749a379d56e741918c5bef6afcde90.png" title=" Johan clicks on the search box" width="0"/>
+                <img src="2f95210b49b8f1c25deecdc2a0596a5fb58fc3f900f7a929b8e562b32d67690a.png" title=" Johan clicks on the search box (completed)" width="0"/>
+                <img src="2f95210b49b8f1c25deecdc2a0596a5fb58fc3f900f7a929b8e562b32d67690a.png" title=" Johan enters 'Macbook pro',ENTER into the search box" width="0"/>
+                <img src="fc22e6b0c3811bbeab5d730a862cf7e5aa0522de848eb0d9d8fda57a1d2ec08a.png" title=" Johan enters 'Macbook pro',ENTER into the search box (completed)" width="0"/>
+                <img src="e9bde49c25ad4874e634bcab8ce0fc2d781bb92fc03dd3f197f08c3f1309a324.png" title=" Johan search item (completed)" width="0"/>
+                <img src="e9bde49c25ad4874e634bcab8ce0fc2d781bb92fc03dd3f197f08c3f1309a324.png" title=" Johan add item to cart" width="0"/>
+                <img src="e9bde49c25ad4874e634bcab8ce0fc2d781bb92fc03dd3f197f08c3f1309a324.png" title=" Johan clicks on [[ChromeDriver: chrome on windows (36542239d757ed3ba8740705b1b0da96)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']]" width="0"/>
+                <img src="3cbdb5604aeea63964ebb4cb05e89f927832c64dba02ed202172e89409d6a03e.png" title=" Johan clicks on [[ChromeDriver: chrome on windows (36542239d757ed3ba8740705b1b0da96)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']] (completed)" width="0"/>
+                <img src="5cc6f7eba82899f40779cc43f1202c7d208e6642663e5d14d7d5fb7b522942c5.png" title=" Johan clicks on the close button" width="0"/>
+                <img src="328db62c8e3d56ef74951908484b851c913ac42a9712ce22888839a473a26594.png" title=" Johan clicks on the close button (completed)" width="0"/>
+                <img src="328db62c8e3d56ef74951908484b851c913ac42a9712ce22888839a473a26594.png" title=" Johan add item to cart (completed)" width="0"/>
+                <img src="328db62c8e3d56ef74951908484b851c913ac42a9712ce22888839a473a26594.png" title=" Johan search item" width="0"/>
+                <img src="328db62c8e3d56ef74951908484b851c913ac42a9712ce22888839a473a26594.png" title=" Johan clicks on the search box" width="0"/>
+                <img src="cd02e5a1b26bd8aea96adf518b697940e328150e6da4c3d103fff4e19df4a809.png" title=" Johan clicks on the search box (completed)" width="0"/>
+                <img src="cd02e5a1b26bd8aea96adf518b697940e328150e6da4c3d103fff4e19df4a809.png" title=" Johan enters 'Airpods',ENTER into the search box" width="0"/>
+                <img src="7e20d6b0aedc91773aedefcea58735123fcd6c69695dc9e59c10d7e9df0a03b7.png" title=" Johan enters 'Airpods',ENTER into the search box (completed)" width="0"/>
+                <img src="07997d6fffd86d87f9d2ea6e1f79c4cdfbccd37282c19e57308856afb8eef573.png" title=" Johan search item (completed)" width="0"/>
+                <img src="07997d6fffd86d87f9d2ea6e1f79c4cdfbccd37282c19e57308856afb8eef573.png" title=" Johan add item to cart" width="0"/>
+                <img src="485eda65a7161de74cc8b0695ce028feb68f99e00d65c3686076dfb3d7f6e7ca.png" title=" Johan clicks on [[ChromeDriver: chrome on windows (36542239d757ed3ba8740705b1b0da96)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']]" width="0"/>
+                <img src="b7d78e7f313a23e1869c2b50d248861eca6f41848d6c07e58536f9a970e3edac.png" title=" Johan clicks on [[ChromeDriver: chrome on windows (36542239d757ed3ba8740705b1b0da96)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']] (completed)" width="0"/>
+                <img src="108688a8efad95a1709bf3f089482c702c97645cf16e6c841f3d1824f2a9028f.png" title=" Johan clicks on the close button" width="0"/>
+                <img src="3aa93debab14a60dadaa6049f6d43daf7f07576a0862447f4e5b7f0c98a40bf0.png" title=" Johan clicks on the close button (completed)" width="0"/>
+                <img src="3aa93debab14a60dadaa6049f6d43daf7f07576a0862447f4e5b7f0c98a40bf0.png" title=" Johan add item to cart (completed)" width="0"/>
+                <img src="3aa93debab14a60dadaa6049f6d43daf7f07576a0862447f4e5b7f0c98a40bf0.png" title=" When adds the following items to the cart
+| Iphone 13 |
+| Macbook pro |
+| Airpods | (completed)" width="0"/>
+                <img src="3aa93debab14a60dadaa6049f6d43daf7f07576a0862447f4e5b7f0c98a40bf0.png" title=" And goes to the cart" width="0"/>
+                <img src="3aa93debab14a60dadaa6049f6d43daf7f07576a0862447f4e5b7f0c98a40bf0.png" title=" Johan open cart" width="0"/>
+                <img src="3aa93debab14a60dadaa6049f6d43daf7f07576a0862447f4e5b7f0c98a40bf0.png" title=" Johan clicks on the cart link button" width="0"/>
+                <img src="2d889effae2d433b39309c6655af6b54460586098163fcd37b43a4f7202340ac.png" title=" Johan clicks on the cart link button (completed)" width="0"/>
+                <img src="2d889effae2d433b39309c6655af6b54460586098163fcd37b43a4f7202340ac.png" title=" Johan clicks on the go to the cart button" width="0"/>
+                <img src="aa06c1a85308c9c5c8facf0f73eb6b7502a3300fb742d2191953f861b4a5ad0a.png" title=" Johan clicks on the go to the cart button (completed)" width="0"/>
+                <img src="9211774efed14ec8628ed44fcc658e6419d060445214427ad906c1c41ee9b81b.png" title=" Johan open cart (completed)" width="0"/>
+                <img src="9211774efed14ec8628ed44fcc658e6419d060445214427ad906c1c41ee9b81b.png" title=" Johan confirm cart" width="0"/>
+                <img src="9211774efed14ec8628ed44fcc658e6419d060445214427ad906c1c41ee9b81b.png" title=" Johan clicks on the confirm purchase button" width="0"/>
+                <img src="680f4d22530153fdb0310a3ef0b8038c0347ef0fd92903eb10c62c0ecb19d480.png" title=" Johan clicks on the confirm purchase button (completed)" width="0"/>
+                <img src="680f4d22530153fdb0310a3ef0b8038c0347ef0fd92903eb10c62c0ecb19d480.png" title=" Johan confirm cart (completed)" width="0"/>
+                <img src="680f4d22530153fdb0310a3ef0b8038c0347ef0fd92903eb10c62c0ecb19d480.png" title=" And goes to the cart (completed)" width="0"/>
+                <img src="680f4d22530153fdb0310a3ef0b8038c0347ef0fd92903eb10c62c0ecb19d480.png" title=" And confirms their credentials using bbva payment method" width="0"/>
+                <img src="680f4d22530153fdb0310a3ef0b8038c0347ef0fd92903eb10c62c0ecb19d480.png" title=" Johan fill out form" width="0"/>
+                <img src="680f4d22530153fdb0310a3ef0b8038c0347ef0fd92903eb10c62c0ecb19d480.png" title=" Johan enters 'karri.corwin@hotmail.com' into the email field" width="0"/>
+                <img src="1368c9adca18226f61703727a26fa0ed77218292441872e749c5ddc8f24fd79d.png" title=" Johan enters 'karri.corwin@hotmail.com' into the email field (completed)" width="0"/>
+                <img src="1368c9adca18226f61703727a26fa0ed77218292441872e749c5ddc8f24fd79d.png" title=" Johan selects #value in the id box" width="0"/>
+                <img src="de1f8e7ace25ead78ce94a082406012a1f604b5178d36c9e26a0edf38c8ea24c.png" title=" Johan selects #value in the id box (completed)" width="0"/>
+                <img src="de1f8e7ace25ead78ce94a082406012a1f604b5178d36c9e26a0edf38c8ea24c.png" title=" Johan enters '11571627353' into the id field" width="0"/>
+                <img src="1a211e7689e2d4e1e66c23d6c4fccaafbb0e84763811fa8203cd58e832740c81.png" title=" Johan enters '11571627353' into the id field (completed)" width="0"/>
+                <img src="1a211e7689e2d4e1e66c23d6c4fccaafbb0e84763811fa8203cd58e832740c81.png" title=" Johan enters 'Yahaira' into the name field" width="0"/>
+                <img src="3b832bf2c17e768fb687d9927e71e7de9f0f7af93b6d8ff38da4f610008280fc.png" title=" Johan enters 'Yahaira' into the name field (completed)" width="0"/>
+                <img src="3b832bf2c17e768fb687d9927e71e7de9f0f7af93b6d8ff38da4f610008280fc.png" title=" Johan enters 'Ortiz' into the lastname field" width="0"/>
+                <img src="ac4f14b090eadfa421fb5774950d632ac51de273732918125700ca43225d4f79.png" title=" Johan enters 'Ortiz' into the lastname field (completed)" width="0"/>
+                <img src="ac4f14b090eadfa421fb5774950d632ac51de273732918125700ca43225d4f79.png" title=" Johan enters '048 Hermine Tunnel, West Hilda, MS 30675' into the address field" width="0"/>
+                <img src="1dbbbbb62d7c3ae8545bcbaf9f2875cfb5a04056f2990227e0b3bb5e07a9dfaa.png" title=" Johan enters '048 Hermine Tunnel, West Hilda, MS 30675' into the address field (completed)" width="0"/>
+                <img src="1dbbbbb62d7c3ae8545bcbaf9f2875cfb5a04056f2990227e0b3bb5e07a9dfaa.png" title=" Johan selects #value in the department box" width="0"/>
+                <img src="525cb8dc1221e95cfaf84758b5b98be09884e64a0f76050a68177f9eac8bf63d.png" title=" Johan selects #value in the department box (completed)" width="0"/>
+                <img src="525cb8dc1221e95cfaf84758b5b98be09884e64a0f76050a68177f9eac8bf63d.png" title=" Johan selects #value in the city box" width="0"/>
+                <img src="342a1b895ae4927bba05423af02bcb60e29a8acd1fac252f27258f8d4c3918bf.png" title=" Johan selects #value in the city box (completed)" width="0"/>
+                <img src="342a1b895ae4927bba05423af02bcb60e29a8acd1fac252f27258f8d4c3918bf.png" title=" Johan enters '3104774695' into the phone field" width="0"/>
+                <img src="5961468da1e4ddd580527ffbe573b35d16f8741d78927a4e19f1c30716a4b79e.png" title=" Johan enters '3104774695' into the phone field (completed)" width="0"/>
+                <img src="5961468da1e4ddd580527ffbe573b35d16f8741d78927a4e19f1c30716a4b79e.png" title=" Johan fill out form (completed)" width="0"/>
+                <img src="5961468da1e4ddd580527ffbe573b35d16f8741d78927a4e19f1c30716a4b79e.png" title=" Johan continue to payment" width="0"/>
+                <img src="5961468da1e4ddd580527ffbe573b35d16f8741d78927a4e19f1c30716a4b79e.png" title=" Johan clicks on the continue button" width="0"/>
+                <img src="0cd247322a52c66c09ca86263af6aa08a10ffef420d3ee6490340d909906e9b1.png" title=" Johan clicks on the continue button (completed)" width="0"/>
+                <img src="6b14a1e90c43dfdb45b052850cdb9e6f670ae28b79d9daaa0b5037c2fe5d926a.png" title=" Johan clicks on continue payment button" width="0"/>
+                <img src="db67aa5dbbb958def0e2cb2048a78f3f18e124035787bb27138f0f9b2279d307.png" title=" Johan clicks on continue payment button (completed)" width="0"/>
+                <img src="625c7d6cd27b86078880acd95b8c9397ab4eb8f6fea4704ce405d1d8498bd483.png" title=" Johan continue to payment (completed)" width="0"/>
+                <img src="625c7d6cd27b86078880acd95b8c9397ab4eb8f6fea4704ce405d1d8498bd483.png" title=" Johan select bbva option" width="0"/>
+                <img src="625c7d6cd27b86078880acd95b8c9397ab4eb8f6fea4704ce405d1d8498bd483.png" title=" Johan clicks on continue BBVA payment option" width="0"/>
+                <img src="b03e01b3d1a7227bdd52a18c8d45dbf9586003822afb1c4710e4bfc152b13d2d.png" title=" Johan clicks on continue BBVA payment option (completed)" width="0"/>
+                <img src="488ae933ed4a1f52eb388e7250d9ef88ea963bad7d16a68feb4d0e70a415f8eb.png" title=" Johan select bbva option (completed)" width="0"/>
+                <img src="488ae933ed4a1f52eb388e7250d9ef88ea963bad7d16a68feb4d0e70a415f8eb.png" title=" Johan fill out bbva form" width="0"/>
+                <img src="488ae933ed4a1f52eb388e7250d9ef88ea963bad7d16a68feb4d0e70a415f8eb.png" title=" Johan enters '4969384126344959' into the card number input" width="0"/>
+                <img src="7713b69bd65c112e48dc3519cc4c8f858e883a477d85aa54f502bc6d16e220f7.png" title=" Johan enters '4969384126344959' into the card number input (completed)" width="0"/>
+                <img src="7713b69bd65c112e48dc3519cc4c8f858e883a477d85aa54f502bc6d16e220f7.png" title=" Johan enters 'Yahaira Ortiz' into the card name input" width="0"/>
+                <img src="c76fc6ac3a36317c297731ff9402453f48eef8dc3118cbaddf05fa40eda4a605.png" title=" Johan enters 'Yahaira Ortiz' into the card name input (completed)" width="0"/>
+                <img src="c76fc6ac3a36317c297731ff9402453f48eef8dc3118cbaddf05fa40eda4a605.png" title=" Johan selects #value in the card month box" width="0"/>
+                <img src="b606f1598026e95c97353a724a4178a9765826ff601950bc23c4cc2ef92d2c1f.png" title=" Johan selects #value in the card month box (completed)" width="0"/>
+                <img src="b606f1598026e95c97353a724a4178a9765826ff601950bc23c4cc2ef92d2c1f.png" title=" Johan selects #value in the card year box" width="0"/>
+                <img src="982aef8a24c85b17cfdc3bd9eae8422b994c26b00b435bdfa89872021ce5fc50.png" title=" Johan selects #value in the card year box (completed)" width="0"/>
+                <img src="982aef8a24c85b17cfdc3bd9eae8422b994c26b00b435bdfa89872021ce5fc50.png" title=" Johan enters '183' into the CCV input" width="0"/>
+                <img src="44eb0d998e652351590a078f245f57d4508e6bd890be0f3f34a1c2b7f6891915.png" title=" Johan enters '183' into the CCV input (completed)" width="0"/>
+                <img src="44eb0d998e652351590a078f245f57d4508e6bd890be0f3f34a1c2b7f6891915.png" title=" Johan selects #value in the card installment box" width="0"/>
+                <img src="305a57c49c678d5a4e9078d73b846922c9320949d746c425642245111ce05d0e.png" title=" Johan selects #value in the card installment box (completed)" width="0"/>
+                <img src="305a57c49c678d5a4e9078d73b846922c9320949d746c425642245111ce05d0e.png" title=" Johan selects #value in the id type box" width="0"/>
+                <img src="23f16dc6496e47983396c835770bb6ac54d264c23c8d474de88de855ee5a7450.png" title=" Johan selects #value in the id type box (completed)" width="0"/>
+                <img src="23f16dc6496e47983396c835770bb6ac54d264c23c8d474de88de855ee5a7450.png" title=" Johan enters '11571627353' into the id type options" width="0"/>
+                <img src="a9f0bc8b16e8a36094bb24467877eb8f970fa228d3897d8cc94d087b61d0b331.png" title=" Johan enters '11571627353' into the id type options (completed)" width="0"/>
+                <img src="a9f0bc8b16e8a36094bb24467877eb8f970fa228d3897d8cc94d087b61d0b331.png" title=" Johan clicks on the terms and conditions check box" width="0"/>
+                <img src="9a2c75d22202da686edc4dee9e770887b318c1c21ab43024e62c6220d29e614f.png" title=" Johan clicks on the terms and conditions check box (completed)" width="0"/>
+                <img src="4366a7a1850ff4096f93b732c8ebe3740a42da64100eb9cc51c61ab53235c78b.png" title=" Johan fill out bbva form (completed)" width="0"/>
+                <img src="4366a7a1850ff4096f93b732c8ebe3740a42da64100eb9cc51c61ab53235c78b.png" title=" And confirms their credentials using bbva payment method (completed)" width="0"/>
+                <img src="4366a7a1850ff4096f93b732c8ebe3740a42da64100eb9cc51c61ab53235c78b.png" title=" Then should see its information in the card" width="0"/>
+                <img src="4366a7a1850ff4096f93b732c8ebe3740a42da64100eb9cc51c61ab53235c78b.png" title=" Then card number should be a string containing '4969'" width="0"/>
+                <img src="3caf1ebf30a2993dfaba3a4e765811632777217c137ca29a06522246267450a6.png" title=" Then card number should be a string containing '4969' (completed)" width="0"/>
+                <img src="3caf1ebf30a2993dfaba3a4e765811632777217c137ca29a06522246267450a6.png" title=" Then card number should be a string containing '4959'" width="0"/>
+                <img src="1bc3766a45f9d8d8a89e47137d03c42a698426039e3c53c27272e37005f55c5e.png" title=" Then card number should be a string containing '4959' (completed)" width="0"/>
+                <img src="1bc3766a45f9d8d8a89e47137d03c42a698426039e3c53c27272e37005f55c5e.png" title=" Then should see its information in the card (completed)" width="0"/>
+                <img src="1bc3766a45f9d8d8a89e47137d03c42a698426039e3c53c27272e37005f55c5e.png" title=" And should be able to confirm the payment" width="0"/>
+                <img src="1bc3766a45f9d8d8a89e47137d03c42a698426039e3c53c27272e37005f55c5e.png" title=" Then pay button enabled should be (true)" width="0"/>
+                <img src="4f0dd36dfff2d25e2c43edef06ea6fda88acf38d1dbfbd91c136b8d8d9e07956.png" title=" Then pay button enabled should be (true) (completed)" width="0"/>
+                <img src="4f0dd36dfff2d25e2c43edef06ea6fda88acf38d1dbfbd91c136b8d8d9e07956.png" title=" And should be able to confirm the payment (completed)" width="0"/>
+                <img src="4f0dd36dfff2d25e2c43edef06ea6fda88acf38d1dbfbd91c136b8d8d9e07956.png" title=" 1: Successfully purchase items using BBVA ({webBrowser=chrome}) (completed)" width="0"/>
+                <img src="49bd34b3ec7bf2668b7f639b5629e9db69b7f2a522e19331fc145cc04406fcc2.png" title=" 2: Successfully purchase items using BBVA ({webBrowser=edge})" width="0"/>
+                <img src="49bd34b3ec7bf2668b7f639b5629e9db69b7f2a522e19331fc145cc04406fcc2.png" title=" Given the user is on the mac-center.com platform using &quot;edge&quot;" width="0"/>
+                <img src="49bd34b3ec7bf2668b7f639b5629e9db69b7f2a522e19331fc145cc04406fcc2.png" title=" Johan open main" width="0"/>
+                <img src="49bd34b3ec7bf2668b7f639b5629e9db69b7f2a522e19331fc145cc04406fcc2.png" title=" Johan opens the browser at https://mac-center.com/" width="0"/>
+                <img src="d4c01ddedfb3d680bee1b0bc6296ec672d2baf6f2300c0ad0d455c3ff1add388.png" title=" Johan opens the browser at https://mac-center.com/ (completed)" width="0"/>
+                <img src="d4c01ddedfb3d680bee1b0bc6296ec672d2baf6f2300c0ad0d455c3ff1add388.png" title=" Johan open main (completed)" width="0"/>
+                <img src="d4c01ddedfb3d680bee1b0bc6296ec672d2baf6f2300c0ad0d455c3ff1add388.png" title=" Given the user is on the mac-center.com platform using &quot;edge&quot; (completed)" width="0"/>
+                <img src="d4c01ddedfb3d680bee1b0bc6296ec672d2baf6f2300c0ad0d455c3ff1add388.png" title=" When adds the following items to the cart
+| Iphone 13 |
+| Macbook pro |
+| Airpods |" width="0"/>
+                <img src="d4c01ddedfb3d680bee1b0bc6296ec672d2baf6f2300c0ad0d455c3ff1add388.png" title=" Johan search item" width="0"/>
+                <img src="d4c01ddedfb3d680bee1b0bc6296ec672d2baf6f2300c0ad0d455c3ff1add388.png" title=" Johan clicks on the search box" width="0"/>
+                <img src="2d3fc3978d60eb648d53f990a15ab219cc9ef4e9c18c26e031fe224397d446ef.png" title=" Johan clicks on the search box (completed)" width="0"/>
+                <img src="2d3fc3978d60eb648d53f990a15ab219cc9ef4e9c18c26e031fe224397d446ef.png" title=" Johan enters 'Iphone 13',ENTER into the search box" width="0"/>
+                <img src="1411c1dd53a40885e57f3b50466cb854e58e6e750ec5f8050d28effc514f3b3a.png" title=" Johan enters 'Iphone 13',ENTER into the search box (completed)" width="0"/>
+                <img src="82f783d1c7eacb48647bf45828399c37a0a03acb44a06e9928708d74931bada6.png" title=" Johan search item (completed)" width="0"/>
+                <img src="82f783d1c7eacb48647bf45828399c37a0a03acb44a06e9928708d74931bada6.png" title=" Johan add item to cart" width="0"/>
+                <img src="82f783d1c7eacb48647bf45828399c37a0a03acb44a06e9928708d74931bada6.png" title=" Johan clicks on [[EdgeDriver: MicrosoftEdge on windows (f9c6ca29c082bd80f9b5a26b9b30057b)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']]" width="0"/>
+                <img src="348ee66149768558facce0619a76d5560eb89abfea3bb8d2f7eed94453665073.png" title=" Johan clicks on [[EdgeDriver: MicrosoftEdge on windows (f9c6ca29c082bd80f9b5a26b9b30057b)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']] (completed)" width="0"/>
+                <img src="20e5b995d82b17091b3a738a2d70b6e01081ee3a4161cb3305c949ad0cc6e8fa.png" title=" Johan clicks on the close button" width="0"/>
+                <img src="8126b11fb3713a3803d60599219395bbc6720d4e80cd19ef1903cfe5d07cceac.png" title=" Johan clicks on the close button (completed)" width="0"/>
+                <img src="8126b11fb3713a3803d60599219395bbc6720d4e80cd19ef1903cfe5d07cceac.png" title=" Johan add item to cart (completed)" width="0"/>
+                <img src="8126b11fb3713a3803d60599219395bbc6720d4e80cd19ef1903cfe5d07cceac.png" title=" Johan search item" width="0"/>
+                <img src="8126b11fb3713a3803d60599219395bbc6720d4e80cd19ef1903cfe5d07cceac.png" title=" Johan clicks on the search box" width="0"/>
+                <img src="d0fb5b562816520a861eedac1ff3ee515942419f4d77a3a4bd6823c39796c182.png" title=" Johan clicks on the search box (completed)" width="0"/>
+                <img src="d0fb5b562816520a861eedac1ff3ee515942419f4d77a3a4bd6823c39796c182.png" title=" Johan enters 'Macbook pro',ENTER into the search box" width="0"/>
+                <img src="f17d254c75a4452d46a56978c3d6bf813a0f4ab08fd5661924c565b864f0e85b.png" title=" Johan enters 'Macbook pro',ENTER into the search box (completed)" width="0"/>
+                <img src="3f93d4a7e1149e0e653395e1782c020fc47e7448cd98a355a182077f84481835.png" title=" Johan search item (completed)" width="0"/>
+                <img src="3f93d4a7e1149e0e653395e1782c020fc47e7448cd98a355a182077f84481835.png" title=" Johan add item to cart" width="0"/>
+                <img src="3f93d4a7e1149e0e653395e1782c020fc47e7448cd98a355a182077f84481835.png" title=" Johan clicks on [[EdgeDriver: MicrosoftEdge on windows (f9c6ca29c082bd80f9b5a26b9b30057b)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']]" width="0"/>
+                <img src="8512fbffd9f760ab8dcda166362949138e4e931221c304058c41d423c1a971dd.png" title=" Johan clicks on [[EdgeDriver: MicrosoftEdge on windows (f9c6ca29c082bd80f9b5a26b9b30057b)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']] (completed)" width="0"/>
+                <img src="a9ccabbbf883783aded2e55d362bb154c418b02ff053bc04e29be96aae765092.png" title=" Johan clicks on the close button" width="0"/>
+                <img src="5f60a92dac1d24eb000823e9a51db4d05a900940ec184d3deceba9554093f279.png" title=" Johan clicks on the close button (completed)" width="0"/>
+                <img src="5f60a92dac1d24eb000823e9a51db4d05a900940ec184d3deceba9554093f279.png" title=" Johan add item to cart (completed)" width="0"/>
+                <img src="5f60a92dac1d24eb000823e9a51db4d05a900940ec184d3deceba9554093f279.png" title=" Johan search item" width="0"/>
+                <img src="5f60a92dac1d24eb000823e9a51db4d05a900940ec184d3deceba9554093f279.png" title=" Johan clicks on the search box" width="0"/>
+                <img src="f9719d9bb5df5140fb5cd6104c6224a4d7282404c5d3f7b6c7eac0fd88668d74.png" title=" Johan clicks on the search box (completed)" width="0"/>
+                <img src="f9719d9bb5df5140fb5cd6104c6224a4d7282404c5d3f7b6c7eac0fd88668d74.png" title=" Johan enters 'Airpods',ENTER into the search box" width="0"/>
+                <img src="37d5e6904bfa19f722e20311d649b0322c07742bb1706b4b364f8f54f87d851c.png" title=" Johan enters 'Airpods',ENTER into the search box (completed)" width="0"/>
+                <img src="84a9ad19b5a23e673276ff6a0c5978655e3e8d82bb3b1d090023378f3aac59b5.png" title=" Johan search item (completed)" width="0"/>
+                <img src="84a9ad19b5a23e673276ff6a0c5978655e3e8d82bb3b1d090023378f3aac59b5.png" title=" Johan add item to cart" width="0"/>
+                <img src="84a9ad19b5a23e673276ff6a0c5978655e3e8d82bb3b1d090023378f3aac59b5.png" title=" Johan clicks on [[EdgeDriver: MicrosoftEdge on windows (f9c6ca29c082bd80f9b5a26b9b30057b)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']]" width="0"/>
+                <img src="e518e1ad2d1dfc56792bcaffd137f5eee2a904e684c602257bad58ef448c2276.png" title=" Johan clicks on [[EdgeDriver: MicrosoftEdge on windows (f9c6ca29c082bd80f9b5a26b9b30057b)] -&gt; xpath: //button[@data-available = 'Agregar al carrito']] (completed)" width="0"/>
+                <img src="51fd7d4e26a59133b4fc2fea50b8150961c75d4824d9eb66e7a8bf3baa5c7d62.png" title=" Johan clicks on the close button" width="0"/>
+                <img src="563212ea62f4d8b95a7a912cacc52565d50bcfd35ce51635280de579793ce571.png" title=" Johan clicks on the close button (completed)" width="0"/>
+                <img src="563212ea62f4d8b95a7a912cacc52565d50bcfd35ce51635280de579793ce571.png" title=" Johan add item to cart (completed)" width="0"/>
+                <img src="563212ea62f4d8b95a7a912cacc52565d50bcfd35ce51635280de579793ce571.png" title=" When adds the following items to the cart
+| Iphone 13 |
+| Macbook pro |
+| Airpods | (completed)" width="0"/>
+                <img src="563212ea62f4d8b95a7a912cacc52565d50bcfd35ce51635280de579793ce571.png" title=" And goes to the cart" width="0"/>
+                <img src="563212ea62f4d8b95a7a912cacc52565d50bcfd35ce51635280de579793ce571.png" title=" Johan open cart" width="0"/>
+                <img src="563212ea62f4d8b95a7a912cacc52565d50bcfd35ce51635280de579793ce571.png" title=" Johan clicks on the cart link button" width="0"/>
+                <img src="9795f3c6ff6edd98d7ca5264cc56b50354901ca82ba56d41653284c5dc64487d.png" title=" Johan clicks on the cart link button (completed)" width="0"/>
+                <img src="9795f3c6ff6edd98d7ca5264cc56b50354901ca82ba56d41653284c5dc64487d.png" title=" Johan clicks on the go to the cart button" width="0"/>
+                <img src="1a3a2ff804c091c4c212d1d66919450530481d936f3ffa2b0d86726950aeed9a.png" title=" Johan clicks on the go to the cart button (completed)" width="0"/>
+                <img src="2ce47a52010079569afd0b0716b66fcc208d10e48a716f4e84c57f289656a051.png" title=" Johan open cart (completed)" width="0"/>
+                <img src="2ce47a52010079569afd0b0716b66fcc208d10e48a716f4e84c57f289656a051.png" title=" Johan confirm cart" width="0"/>
+                <img src="2ce47a52010079569afd0b0716b66fcc208d10e48a716f4e84c57f289656a051.png" title=" Johan clicks on the confirm purchase button" width="0"/>
+                <img src="ceade995d243f8ddd1133539f1bcae1de1f3538591c12d5698834e9df5e8be31.png" title=" Johan clicks on the confirm purchase button (completed)" width="0"/>
+                <img src="b25b4455dabfa404037234821ff5ec2f4bd811d736216f6d7435d8cd8ed777b5.png" title=" Johan confirm cart (completed)" width="0"/>
+                <img src="b25b4455dabfa404037234821ff5ec2f4bd811d736216f6d7435d8cd8ed777b5.png" title=" And goes to the cart (completed)" width="0"/>
+                <img src="b25b4455dabfa404037234821ff5ec2f4bd811d736216f6d7435d8cd8ed777b5.png" title=" And confirms their credentials using bbva payment method" width="0"/>
+                <img src="b25b4455dabfa404037234821ff5ec2f4bd811d736216f6d7435d8cd8ed777b5.png" title=" Johan fill out form" width="0"/>
+                <img src="b25b4455dabfa404037234821ff5ec2f4bd811d736216f6d7435d8cd8ed777b5.png" title=" Johan enters 'georgianne.considine@hotmail.com' into the email field" width="0"/>
+                <img src="57481878d396fdddc8a1b5620867f26d961aba9740c086823a04dde06f22dbde.png" title=" Johan enters 'georgianne.considine@hotmail.com' into the email field (completed)" width="0"/>
+                <img src="57481878d396fdddc8a1b5620867f26d961aba9740c086823a04dde06f22dbde.png" title=" Johan selects #value in the id box" width="0"/>
+                <img src="15c41ccfd2c444208262d87cb416dbe66b7da561b351dcf2a570b5d118587c18.png" title=" Johan selects #value in the id box (completed)" width="0"/>
+                <img src="15c41ccfd2c444208262d87cb416dbe66b7da561b351dcf2a570b5d118587c18.png" title=" Johan enters '11928567519' into the id field" width="0"/>
+                <img src="f1ec4c7b1978958d37afc29227fa47ce61a7fed61661af45b7b583baff05d528.png" title=" Johan enters '11928567519' into the id field (completed)" width="0"/>
+                <img src="f1ec4c7b1978958d37afc29227fa47ce61a7fed61661af45b7b583baff05d528.png" title=" Johan enters 'Zack' into the name field" width="0"/>
+                <img src="e460dbe169b80eb31531d339b9ad06090907c675914488879154d994071e6e7d.png" title=" Johan enters 'Zack' into the name field (completed)" width="0"/>
+                <img src="e460dbe169b80eb31531d339b9ad06090907c675914488879154d994071e6e7d.png" title=" Johan enters 'Upton' into the lastname field" width="0"/>
+                <img src="5556fdfd48303e81a7326d1f1f550e91bc5421002fdb746a2f2630d55a99832b.png" title=" Johan enters 'Upton' into the lastname field (completed)" width="0"/>
+                <img src="5556fdfd48303e81a7326d1f1f550e91bc5421002fdb746a2f2630d55a99832b.png" title=" Johan enters 'Suite 101 95537 Upton Mission, Scottown, VA 22342' into the address field" width="0"/>
+                <img src="00489438b05d4fb4088ea18688af8fb312458b2ee9686fdba7c2ceaaa8d2a5cd.png" title=" Johan enters 'Suite 101 95537 Upton Mission, Scottown, VA 22342' into the address field (completed)" width="0"/>
+                <img src="00489438b05d4fb4088ea18688af8fb312458b2ee9686fdba7c2ceaaa8d2a5cd.png" title=" Johan selects #value in the department box" width="0"/>
+                <img src="6ea6c29063e293037f00a58a664a62bc6c6fda1969201a2f16e8bd1497cdeab3.png" title=" Johan selects #value in the department box (completed)" width="0"/>
+                <img src="6ea6c29063e293037f00a58a664a62bc6c6fda1969201a2f16e8bd1497cdeab3.png" title=" Johan selects #value in the city box" width="0"/>
+                <img src="9fe0c0c3ff65a778de21ab2ee36f389c0ec8eb22800a916abc8ff3a0ce02db51.png" title=" Johan selects #value in the city box (completed)" width="0"/>
+                <img src="9fe0c0c3ff65a778de21ab2ee36f389c0ec8eb22800a916abc8ff3a0ce02db51.png" title=" Johan enters '3197274242' into the phone field" width="0"/>
+                <img src="ce7b6dfa3958a9518c6952f4b0307cc83147001046ce046f8af7c528758652e9.png" title=" Johan enters '3197274242' into the phone field (completed)" width="0"/>
+                <img src="ce7b6dfa3958a9518c6952f4b0307cc83147001046ce046f8af7c528758652e9.png" title=" Johan fill out form (completed)" width="0"/>
+                <img src="ce7b6dfa3958a9518c6952f4b0307cc83147001046ce046f8af7c528758652e9.png" title=" Johan continue to payment" width="0"/>
+                <img src="ce7b6dfa3958a9518c6952f4b0307cc83147001046ce046f8af7c528758652e9.png" title=" Johan clicks on the continue button" width="0"/>
+                <img src="29869958430640ec2e5cb4c5f876360fc8ea95f05f3a256b38dcd01c124e678d.png" title=" Johan clicks on the continue button (completed)" width="0"/>
+                <img src="29869958430640ec2e5cb4c5f876360fc8ea95f05f3a256b38dcd01c124e678d.png" title=" Johan clicks on continue payment button" width="0"/>
+                <img src="2acfe161aed14d13935a488eeae94e83a22a678b75a22883bfa35720723cd0b8.png" title=" Johan clicks on continue payment button (completed)" width="0"/>
+                <img src="2acfe161aed14d13935a488eeae94e83a22a678b75a22883bfa35720723cd0b8.png" title=" Johan continue to payment (completed)" width="0"/>
+                <img src="2acfe161aed14d13935a488eeae94e83a22a678b75a22883bfa35720723cd0b8.png" title=" Johan select bbva option" width="0"/>
+                <img src="2acfe161aed14d13935a488eeae94e83a22a678b75a22883bfa35720723cd0b8.png" title=" Johan clicks on continue BBVA payment option" width="0"/>
+                <img src="91ef39ae7098ad61c8614fc36b976ba3805a0429ef20d17fef8fc2fc0089b840.png" title=" Johan clicks on continue BBVA payment option (completed)" width="0"/>
+                <img src="91ef39ae7098ad61c8614fc36b976ba3805a0429ef20d17fef8fc2fc0089b840.png" title=" Johan select bbva option (completed)" width="0"/>
+                <img src="91ef39ae7098ad61c8614fc36b976ba3805a0429ef20d17fef8fc2fc0089b840.png" title=" Johan fill out bbva form" width="0"/>
+                <img src="873f0d7a848408a87129f28ed37721ac9437e1e8e7413665d7da0dc3eb702813.png" title=" Johan enters '4266215458863422' into the card number input" width="0"/>
+                <img src="7964a72fee2c8ee6165998d8f64c95d965b30cd07e181ede88171b4f98b19fc0.png" title=" Johan enters '4266215458863422' into the card number input (completed)" width="0"/>
+                <img src="7964a72fee2c8ee6165998d8f64c95d965b30cd07e181ede88171b4f98b19fc0.png" title=" Johan enters 'Zack Upton' into the card name input" width="0"/>
+                <img src="4962822634eaa22ca52006d9be89372bdf8614a57da6b1a6fab16573db45d35c.png" title=" Johan enters 'Zack Upton' into the card name input (completed)" width="0"/>
+                <img src="4962822634eaa22ca52006d9be89372bdf8614a57da6b1a6fab16573db45d35c.png" title=" Johan selects #value in the card month box" width="0"/>
+                <img src="cbfd63a978c425fd487a3db776157c0ea45b85abe81d975d0e921aef72dda1e5.png" title=" Johan selects #value in the card month box (completed)" width="0"/>
+                <img src="cbfd63a978c425fd487a3db776157c0ea45b85abe81d975d0e921aef72dda1e5.png" title=" Johan selects #value in the card year box" width="0"/>
+                <img src="f91b6c223ea98a844a95202a2563d80328fa5f6a9e8748320e6898f9c0c9c5ae.png" title=" Johan selects #value in the card year box (completed)" width="0"/>
+                <img src="f91b6c223ea98a844a95202a2563d80328fa5f6a9e8748320e6898f9c0c9c5ae.png" title=" Johan enters '120' into the CCV input" width="0"/>
+                <img src="d92c4713062b6285baf8fb4a58a67bea09619d97ae811c899b81be870aad464a.png" title=" Johan enters '120' into the CCV input (completed)" width="0"/>
+                <img src="d92c4713062b6285baf8fb4a58a67bea09619d97ae811c899b81be870aad464a.png" title=" Johan selects #value in the card installment box" width="0"/>
+                <img src="f1995e479bc6e087557875df171f243fa70051d3acba265c548b8613ecce14b9.png" title=" Johan selects #value in the card installment box (completed)" width="0"/>
+                <img src="f1995e479bc6e087557875df171f243fa70051d3acba265c548b8613ecce14b9.png" title=" Johan selects #value in the id type box" width="0"/>
+                <img src="aaa71c94775dbbdbfaa35d5ca2b3e5fe2732d85a393c56727f6fb38fea9f4982.png" title=" Johan selects #value in the id type box (completed)" width="0"/>
+                <img src="aaa71c94775dbbdbfaa35d5ca2b3e5fe2732d85a393c56727f6fb38fea9f4982.png" title=" Johan enters '11928567519' into the id type options" width="0"/>
+                <img src="ebc0275fabeb050b401d4aa3ef9b628b734a83720c7cfe70c5e3e36619731468.png" title=" Johan enters '11928567519' into the id type options (completed)" width="0"/>
+                <img src="ebc0275fabeb050b401d4aa3ef9b628b734a83720c7cfe70c5e3e36619731468.png" title=" Johan clicks on the terms and conditions check box" width="0"/>
+                <img src="8cb8584221823d98976dd94c6e5e4cb2eb9a0ee64facfc430d9baf6d73d9a10e.png" title=" Johan clicks on the terms and conditions check box (completed)" width="0"/>
+                <img src="4e29d04e261ece525c497f82e261ddf011aaac47bbe3da83dcd1c44fbe75d6a1.png" title=" Johan fill out bbva form (completed)" width="0"/>
+                <img src="4e29d04e261ece525c497f82e261ddf011aaac47bbe3da83dcd1c44fbe75d6a1.png" title=" And confirms their credentials using bbva payment method (completed)" width="0"/>
+                <img src="4e29d04e261ece525c497f82e261ddf011aaac47bbe3da83dcd1c44fbe75d6a1.png" title=" Then should see its information in the card" width="0"/>
+                <img src="4e29d04e261ece525c497f82e261ddf011aaac47bbe3da83dcd1c44fbe75d6a1.png" title=" Then card number should be a string containing '4266'" width="0"/>
+                <img src="66268f0b9737d4dc70afa2df2d8943a830467ad24106ac670de61942f40c5253.png" title=" Then card number should be a string containing '4266' (completed)" width="0"/>
+                <img src="66268f0b9737d4dc70afa2df2d8943a830467ad24106ac670de61942f40c5253.png" title=" Then card number should be a string containing '3422'" width="0"/>
+                <img src="d279731308841d054ba99175a9ffeea21c85865b86534af4b5beea3c6923c1e2.png" title=" Then card number should be a string containing '3422' (completed)" width="0"/>
+                <img src="d279731308841d054ba99175a9ffeea21c85865b86534af4b5beea3c6923c1e2.png" title=" Then should see its information in the card (completed)" width="0"/>
+                <img src="d279731308841d054ba99175a9ffeea21c85865b86534af4b5beea3c6923c1e2.png" title=" And should be able to confirm the payment" width="0"/>
+                <img src="d279731308841d054ba99175a9ffeea21c85865b86534af4b5beea3c6923c1e2.png" title=" Then pay button enabled should be (true)" width="0"/>
+                <img src="ce36457abefb32d50d8c7b09535503f48e07174e742af5e1d55bd5c153a42b11.png" title=" Then pay button enabled should be (true) (completed)" width="0"/>
+                <img src="ce36457abefb32d50d8c7b09535503f48e07174e742af5e1d55bd5c153a42b11.png" title=" And should be able to confirm the payment (completed)" width="0"/>
+
+                <img src="ce36457abefb32d50d8c7b09535503f48e07174e742af5e1d55bd5c153a42b11.png" title=" 2: Successfully purchase items using BBVA ({webBrowser=edge}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.46</span>
+</div>
+</body>
+</html>
