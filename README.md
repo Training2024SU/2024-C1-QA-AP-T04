@@ -1,24 +1,10 @@
-# Reto ScreenPlay
+# Automatización de mac-center.com y Servicios API de Marvel
 
-"Cada momento de tu vida es una prueba o una celebración".
+## Descripción del Proyecto
 
-1. Visite la página de pruebas  [https://automationexercise.com/](https://automationexercise.com/) 
-2. Seleccione una página comercial diferente a la de sus compañeros por ejemplo (exito, lavaquita, homecenter, etc)
+Este proyecto tiene como objetivo automatizar pruebas para la página web [mac-center.com](https://mac-center.com) y los servicios API de Marvel utilizando el patrón Screenplay con Serenity y Java. Las pruebas automatizadas garantizan la funcionalidad y fiabilidad tanto de la interfaz de usuario de la página web como de las interacciones con las APIs de Marvel.
 
-Seleccione un flujo de compra para cada página:
+![alt text](image.png)
 
-- registrarse (correo válido diferente al personal)
-- iniciar sesión
-- seleccionar productos
-- Modificar cantidades
-- y terminar su compra.
 
-Nota: El valor agregado de la automatización es que sea lo más aleatorio posible la selección de productos
 
-Requisitos:
-
-1. Gestor de dependencias Gradle
-2. Test Runner de Cucumber
-3. Patron ScreenPlay 
-4. Framework Serenity BDD
-5. Versión java 11 o superior
