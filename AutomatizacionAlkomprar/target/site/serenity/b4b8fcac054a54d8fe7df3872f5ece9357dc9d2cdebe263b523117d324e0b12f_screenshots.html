@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="a3acd393781851c30e025141a07d8a43f0455f60649312aa462118585b7ab003.html">Realizar Compra De Producto</a></span>
+                > <span class="truncate-60"><a
+                    href="b4b8fcac054a54d8fe7df3872f5ece9357dc9d2cdebe263b523117d324e0b12f.html">Realizar compra de producto con usuario registrado </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 19-05-2024 07:35</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Realizar Compra De Producto </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                yo como usuario de la pagina https://www.alkomprar.com/<br />
+quiero poder comprar productos<br />
+para obtener los beneficios de la pagina
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="02345bfc7f6a6b34322abdbfc88d588d110380684b0c39644eac3679b0451e58.html">Compra Un Producto
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="3ce388ea8511800032930896a3e5ba2c4f80e46f1a10b143b67009baf212c6a0.html">2 To 5 Minutes
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="2f5c55d8c31fac7c09e00fc27e8072a29b2ed45c30a89beea336fdf1515b8048.html">Ruta Critica
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Realizar compra de producto con usuario registrado
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">When se registra e inicia sesion con "&lt;correo&gt;","&lt;nombre&gt;","&lt;apellido&gt;","&lt;telefono&gt;"<br>And selecciona un producto "&lt;producto&gt;" finalizando su compra<br>Then deberia visualizar un mensaje con la finalizacion de su orden</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="24a2242b2c91c9043dc1a0a0b57ce90be6a7d065bcf91e3e6c68bc99718942ee.png" title=" 1: Realizar compra de producto con usuario registrado ({correo=devonalvarez20245@gmail.com, nombre=devon jose, apellido=alvarez osorio, telefono=3022430976, producto=televisor})" width="0"/>
+                <img src="24a2242b2c91c9043dc1a0a0b57ce90be6a7d065bcf91e3e6c68bc99718942ee.png" title=" Given que el usuario se encuentra en la pagina web alkomprar.com" width="0"/>
+                <img src="24a2242b2c91c9043dc1a0a0b57ce90be6a7d065bcf91e3e6c68bc99718942ee.png" title=" Devon abrir pagina inicial" width="0"/>
+                <img src="24a2242b2c91c9043dc1a0a0b57ce90be6a7d065bcf91e3e6c68bc99718942ee.png" title=" Devon opens the browser at https://www.alkomprar.com/" width="0"/>
+                <img src="8561710954c0283f8dfff1915602105725367b0c3879e03e63e850b6665ae86a.png" title=" Devon opens the browser at https://www.alkomprar.com/ (completed)" width="0"/>
+                <img src="8561710954c0283f8dfff1915602105725367b0c3879e03e63e850b6665ae86a.png" title=" Devon abrir pagina inicial (completed)" width="0"/>
+                <img src="8561710954c0283f8dfff1915602105725367b0c3879e03e63e850b6665ae86a.png" title=" Given que el usuario se encuentra en la pagina web alkomprar.com (completed)" width="0"/>
+                <img src="8561710954c0283f8dfff1915602105725367b0c3879e03e63e850b6665ae86a.png" title=" When se registra e inicia sesion con &quot;devonalvarez20245@gmail.com&quot;,&quot;devon jose&quot;,&quot;alvarez osorio&quot;,&quot;3022430976&quot;" width="0"/>
+                <img src="8561710954c0283f8dfff1915602105725367b0c3879e03e63e850b6665ae86a.png" title=" Devon navegar a registro" width="0"/>
+                <img src="8561710954c0283f8dfff1915602105725367b0c3879e03e63e850b6665ae86a.png" title=" Devon clicks on Boton mi cuenta" width="0"/>
+                <img src="d084e7d6f16215382fa969f8cc7868c8be32a8b39fbea32eec33a41c7bb6237e.png" title=" Devon clicks on Boton mi cuenta (completed)" width="0"/>
+                <img src="d084e7d6f16215382fa969f8cc7868c8be32a8b39fbea32eec33a41c7bb6237e.png" title=" Devon navegar a registro (completed)" width="0"/>
+                <img src="d084e7d6f16215382fa969f8cc7868c8be32a8b39fbea32eec33a41c7bb6237e.png" title=" Devon llenar registro" width="0"/>
+                <img src="d084e7d6f16215382fa969f8cc7868c8be32a8b39fbea32eec33a41c7bb6237e.png" title=" Devon clicks on campo email" width="0"/>
+                <img src="ae23022da2f10dd963376e09acaac3241a95d6ae77636633d0bcefb5fd0c3ab9.png" title=" Devon clicks on campo email (completed)" width="0"/>
+                <img src="ae23022da2f10dd963376e09acaac3241a95d6ae77636633d0bcefb5fd0c3ab9.png" title=" Devon enters 'devonalvarez20245@gmail.com' into campo email" width="0"/>
+                <img src="75de5c1bbc05794b086c2aae18f84a92fffbd533bd07f0fb6098a4794fc95461.png" title=" Devon enters 'devonalvarez20245@gmail.com' into campo email (completed)" width="0"/>
+                <img src="75de5c1bbc05794b086c2aae18f84a92fffbd533bd07f0fb6098a4794fc95461.png" title=" Devon clicks on boton continuar" width="0"/>
+                <img src="0ff65cd2e2adbe6d33250e50838b86027ef9518df196c81d0e67e38cbcd5c9c5.png" title=" Devon clicks on boton continuar (completed)" width="0"/>
+                <img src="0ff65cd2e2adbe6d33250e50838b86027ef9518df196c81d0e67e38cbcd5c9c5.png" title=" Devon enters 'devon jose' into campo nombre" width="0"/>
+                <img src="ddd8b5e772a4dbc4d6abaa1e583b1419c2f8571a6c530ae90a49ef1952eca7af.png" title=" Devon enters 'devon jose' into campo nombre (completed)" width="0"/>
+                <img src="ddd8b5e772a4dbc4d6abaa1e583b1419c2f8571a6c530ae90a49ef1952eca7af.png" title=" Devon enters 'alvarez osorio' into campo apellido" width="0"/>
+                <img src="1c50a8e107962994625b3e7f91fcd64ed070877c20c835d088b0e60e3ca263ea.png" title=" Devon enters 'alvarez osorio' into campo apellido (completed)" width="0"/>
+                <img src="1c50a8e107962994625b3e7f91fcd64ed070877c20c835d088b0e60e3ca263ea.png" title=" Devon enters '3022430976' into campo telefono" width="0"/>
+                <img src="b14f09affc458eb7e14b6e6912f811a854c66821d760f4c8b2dbc2c5ef7cbcb0.png" title=" Devon enters '3022430976' into campo telefono (completed)" width="0"/>
+                <img src="f95b87a04d9137e4ea0633ad51fc832021e7a723bb59072c4c4f1796d1b7ef4a.png" title=" Devon clicks on campo terminos y condiciones" width="0"/>
+                <img src="9b17d9269bcd8a7bc7da843ee74c499fc6600562ccf89e45bb36d65c36b692a8.png" title=" Devon clicks on campo terminos y condiciones (completed)" width="0"/>
+                <img src="9b17d9269bcd8a7bc7da843ee74c499fc6600562ccf89e45bb36d65c36b692a8.png" title=" Devon clicks on boton continuar registro" width="0"/>
+                <img src="50f2859a7538aa6640590bc05885bbc428b15d26b33d25244faeb4dc939581af.png" title=" Devon clicks on boton continuar registro (completed)" width="0"/>
+                <img src="50f2859a7538aa6640590bc05885bbc428b15d26b33d25244faeb4dc939581af.png" title=" Devon llenar registro (completed)" width="0"/>
+                <img src="50f2859a7538aa6640590bc05885bbc428b15d26b33d25244faeb4dc939581af.png" title=" When se registra e inicia sesion con &quot;devonalvarez20245@gmail.com&quot;,&quot;devon jose&quot;,&quot;alvarez osorio&quot;,&quot;3022430976&quot; (completed)" width="0"/>
+                <img src="50f2859a7538aa6640590bc05885bbc428b15d26b33d25244faeb4dc939581af.png" title=" And selecciona un producto &quot;televisor&quot; finalizando su compra" width="0"/>
+                <img src="50f2859a7538aa6640590bc05885bbc428b15d26b33d25244faeb4dc939581af.png" title=" Devon seleccionar producto" width="0"/>
+                <img src="50f2859a7538aa6640590bc05885bbc428b15d26b33d25244faeb4dc939581af.png" title=" Devon clicks on campo busqueda producto" width="0"/>
+                <img src="50f2859a7538aa6640590bc05885bbc428b15d26b33d25244faeb4dc939581af.png" title=" Devon enters 'televisor' into campo busqueda producto" width="0"/>
+                <img src="73e390d915a2cc9e8b1a097a4663564b645b84dd12852c76df19db236298d96e.png" title=" Devon enters 'televisor' into campo busqueda producto (completed)" width="0"/>
+                <img src="73e390d915a2cc9e8b1a097a4663564b645b84dd12852c76df19db236298d96e.png" title=" Devon types 'ENTER' in campo busqueda producto" width="0"/>
+                <img src="c8bcec56eef6d8797450ff676b1c00ce02ef71e5e1d39af84983defa9175e712.png" title=" Devon types 'ENTER' in campo busqueda producto (completed)" width="0"/>
+                <img src="edabd015cb317f2fd521542c3c9d940a04d3bc80560ac450a2aaf0d759e5c063.png" title=" Devon clicks on  producto" width="0"/>
+                <img src="37f722c427f1eb3389d818ff0214e5d6312a14d904f9b6333b1ff0af4b165fa8.png" title=" Devon clicks on  producto (completed)" width="0"/>
+                <img src="e8ea76508050a6410b0726c24434b7174281d9f6e2e4a41d63338008f8e1f16d.png" title=" Devon clicks on  ir a carrito " width="0"/>
+                <img src="d10f6dee44191ae68142143ea012fc5ad7b457c9045c16c9dee2e00d63d5f83c.png" title=" Devon clicks on  ir a carrito  (completed)" width="0"/>
+                <img src="16ebafd7e9a4b594bfbdda13a5146ec3e8bfbdc2b00b5f0428903836e5797dd9.png" title=" Devon clicks on  boton ir a pagar " width="0"/>
+                <img src="3786ebe3b4e8f8a079841ff56534f476123239e4b3135eedf4aaa7b7340d2434.png" title=" Devon clicks on  boton ir a pagar  (completed)" width="0"/>
+                <img src="3786ebe3b4e8f8a079841ff56534f476123239e4b3135eedf4aaa7b7340d2434.png" title=" Devon seleccionar producto (completed)" width="0"/>
+                <img src="0b0a5752493073b46df32d46c74ce913b815bfad057e3d701736687cb6d4bec0.png" title=" Devon completar datos pago" width="0"/>
+                <img src="0b0a5752493073b46df32d46c74ce913b815bfad057e3d701736687cb6d4bec0.png" title=" Devon clicks on  campo tipo documento " width="0"/>
+                <img src="2c7f0b573080f9635ce517cc8d5b55747aed9679198dc338fec74176c46cf667.png" title=" Devon clicks on  campo tipo documento  (completed)" width="0"/>
+                <img src="2c7f0b573080f9635ce517cc8d5b55747aed9679198dc338fec74176c46cf667.png" title=" Devon clicks on  select tipo documento " width="0"/>
+                <img src="b86cffde317581354552b1c4ba45f4b911284383c56c4107158a57f52ce11d20.png" title=" Devon clicks on  select tipo documento  (completed)" width="0"/>
+                <img src="b86cffde317581354552b1c4ba45f4b911284383c56c4107158a57f52ce11d20.png" title=" Devon enters '1003284486' into  campo numero documento " width="0"/>
+                <img src="cc3875121de5c50fbf23476d22a08ee6a596f80f0f29b6b8743d04d79d8e09d4.png" title=" Devon enters '1003284486' into  campo numero documento  (completed)" width="0"/>
+                <img src="db4d6038b549cc801fba1e75cc91fab490e368d1a34d1c6d5ef6c6188cf4c009.png" title=" Devon clicks on  campo departamento " width="0"/>
+                <img src="365dab673f18a6cc80f012d6ca7b1d57a44aab08372477c8f076a2637713827c.png" title=" Devon clicks on  campo departamento  (completed)" width="0"/>
+                <img src="365dab673f18a6cc80f012d6ca7b1d57a44aab08372477c8f076a2637713827c.png" title=" Devon clicks on  select departamento " width="0"/>
+                <img src="0ca664760081f8125b205117acc1c00f9c30febc8ab7f0d585129538ee2a9185.png" title=" Devon clicks on  select departamento  (completed)" width="0"/>
+                <img src="c3a70cc476b99bbbec06d852cbb5278fe3bce190a711c0bd29f0d33904a640df.png" title=" Devon clicks on campo direccion " width="0"/>
+                <img src="8a34ef7ec4bc3bec88abde7321d05873422011d641f507693ee2dcb63a35da0c.png" title=" Devon clicks on campo direccion  (completed)" width="0"/>
+                <img src="8a34ef7ec4bc3bec88abde7321d05873422011d641f507693ee2dcb63a35da0c.png" title=" Devon enters 'Calle 38 # 48 - 27' into campo direccion " width="0"/>
+                <img src="edc380c27a3e920db7cfe5db517eae0befa9f7856ccda5c369fcc82b6a42cde8.png" title=" Devon enters 'Calle 38 # 48 - 27' into campo direccion  (completed)" width="0"/>
+                <img src="edc380c27a3e920db7cfe5db517eae0befa9f7856ccda5c369fcc82b6a42cde8.png" title=" Devon clicks on campo barrio " width="0"/>
+                <img src="8e7dfad2a4d5eb40bbe1fc22caec17e57baeaf8238ce3807958e75580dac8bc0.png" title=" Devon clicks on campo barrio  (completed)" width="0"/>
+                <img src="8e7dfad2a4d5eb40bbe1fc22caec17e57baeaf8238ce3807958e75580dac8bc0.png" title=" Devon enters 'Ceuta' into campo barrio " width="0"/>
+                <img src="cc65e2bf4dcdb660bda7d5f5ba054e690e6fb72a85877b7ec27e9f261a8d3db7.png" title=" Devon enters 'Ceuta' into campo barrio  (completed)" width="0"/>
+                <img src="cc65e2bf4dcdb660bda7d5f5ba054e690e6fb72a85877b7ec27e9f261a8d3db7.png" title=" Devon clicks on check guardar direccion " width="0"/>
+                <img src="1f5cb9757f18be74c5f740c070102daa97dfa7bee96b1a02deef041202b98ae3.png" title=" Devon clicks on check guardar direccion  (completed)" width="0"/>
+                <img src="b7ce53e98b03cac64f6d6a90e4579132098f8459353846daa5b0340a22357949.png" title=" Devon clicks on boton continuar pago" width="0"/>
+                <img src="030720d89073ea6735123dd845427172cc093bb240986b402e490822fe0ab420.png" title=" Devon clicks on boton continuar pago (completed)" width="0"/>
+                <img src="030720d89073ea6735123dd845427172cc093bb240986b402e490822fe0ab420.png" title=" Devon clicks on boton continuar pago" width="0"/>
+                <img src="7a63276bd2f961f5b9a9ee44ec4a9bddf180c07dd640626e9048f92e00449fae.png" title=" Devon clicks on boton continuar pago (completed)" width="0"/>
+                <img src="680b94ee3acd3073460bbefcff5a01fb33b3d2d72d32adf553d4fa53c5c9671b.png" title=" Devon clicks on boton continuar" width="0"/>
+                <img src="ff1f7ad96011f7d0769b1a5a66b6f0239fe4abc341ea3bb93fa5079f8128068c.png" title=" Devon clicks on boton continuar (completed)" width="0"/>
+                <img src="f083c67473455f79ec6a39b6c8bd1f4493047f0b56e79b414cd5236fa5a56fb9.png" title=" Devon clicks on campo metodo pago" width="0"/>
+                <img src="41b1f09ab0d0aef3ffee9fddcd772b5d4f22b14b1fa81619f24bd9e3260264e2.png" title=" Devon clicks on campo metodo pago (completed)" width="0"/>
+                <img src="41b1f09ab0d0aef3ffee9fddcd772b5d4f22b14b1fa81619f24bd9e3260264e2.png" title=" Devon clicks on campo metodo pago" width="0"/>
+                <img src="dc187a62a7305eeaa5b052da3d272b9b0a01b186500738327395bd09497e127b.png" title=" Devon clicks on campo metodo pago (completed)" width="0"/>
+                <img src="dc187a62a7305eeaa5b052da3d272b9b0a01b186500738327395bd09497e127b.png" title=" Devon clicks on boton continuar y revisar pedido" width="0"/>
+                <img src="7207ab33ecf255deda3d393821844169060fefdbc7c3cccbe005f539b42b2a12.png" title=" Devon clicks on boton continuar y revisar pedido (completed)" width="0"/>
+                <img src="8dfc03d000e9a22aee87bd05f5dffc0f15dfebb51b874b8cd18e3d794d501e31.png" title=" Devon clicks on boton continuar" width="0"/>
+                <img src="baa350056e43f34de573f71e5173c53e0ba22fb8d7b1d0a1ca06fb5eee3ceb89.png" title=" Devon clicks on boton continuar (completed)" width="0"/>
+                <img src="db654e19bf27fcf78c3b9e1fe1ab98a11616a609adcd023e17747b4c577b70d9.png" title=" Devon completar datos pago (completed)" width="0"/>
+                <img src="db654e19bf27fcf78c3b9e1fe1ab98a11616a609adcd023e17747b4c577b70d9.png" title=" And selecciona un producto &quot;televisor&quot; finalizando su compra (completed)" width="0"/>
+                <img src="db654e19bf27fcf78c3b9e1fe1ab98a11616a609adcd023e17747b4c577b70d9.png" title=" Then deberia visualizar un mensaje con la finalizacion de su orden" width="0"/>
+                <img src="db654e19bf27fcf78c3b9e1fe1ab98a11616a609adcd023e17747b4c577b70d9.png" title=" Then el texto de la factura  should be 'Ver mi recibo de pago'" width="0"/>
+
+                <img src="db654e19bf27fcf78c3b9e1fe1ab98a11616a609adcd023e17747b4c577b70d9.png" title=" 1: Realizar compra de producto con usuario registrado ({correo=devonalvarez20245@gmail.com, nombre=devon jose, apellido=alvarez osorio, telefono=3022430976, producto=televisor}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.46</span>
+</div>
+</body>
+</html>
