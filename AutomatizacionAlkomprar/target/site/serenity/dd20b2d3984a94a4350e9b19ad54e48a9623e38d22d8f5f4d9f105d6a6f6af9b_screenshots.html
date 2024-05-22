@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="ac5653bb306350a05e28f1c989d40958c7f21d94bb1f625ac83d48321f612a70.html">: Realizar Compra De Producto</a></span>
+                > <span class="truncate-60"><a
+                    href="dd20b2d3984a94a4350e9b19ad54e48a9623e38d22d8f5f4d9f105d6a6f6af9b.html">Realizar compra de producto con usuario registrado </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 17-05-2024 15:05</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">: Realizar Compra De Producto</span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                yo como usuario de la pagina https://www.alkomprar.com/<br />
+quiero poder comprar productos<br />
+para obtener los beneficios de la pagina
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="c68fd6639ab29c4b0ac02a78bc39f4e22557bcaa40ef14c903ac0e584626edfe.html">1 To 2 Minutes
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="02345bfc7f6a6b34322abdbfc88d588d110380684b0c39644eac3679b0451e58.html">Compra Un Producto
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="2f5c55d8c31fac7c09e00fc27e8072a29b2ed45c30a89beea336fdf1515b8048.html">Ruta Critica
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Realizar compra de producto con usuario registrado
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given que el usuario se encuentra en la pagina web alkomprar.com<br>When se registra e inicia sesion con "&lt;correo&gt;","&lt;nombre&gt;","&lt;apellido&gt;","&lt;telefono&gt;"<br>And selecciona un producto "&lt;producto&gt;" finalizando su compra<br>Then deberia visualizar un mensaje con la finalizacion de su orden</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected: an element that is visible but: no matching element found by [boton continuar located with: xpath: //*[@id='deliveryMethodSubmit']]</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>osorio.alvarez.devon.tasks.CompletarDatosPago.performAs(CompletarDatosPago.java:28)<br />net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:523)<br />net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:503)<br />net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:475)<br />net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:217)<br />net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:204)<br />net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:92)<br />osorio.alvarez.devon.stepdefinitions.ComproProductoStepDefinitions.seleccionaUnProductoFinalizandoSuCompra(ComproProductoStepDefinitions.java:53)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:56)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:332)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:53)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource13534886737697346293.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="24a2242b2c91c9043dc1a0a0b57ce90be6a7d065bcf91e3e6c68bc99718942ee.png" title=" 1: Realizar compra de producto con usuario registrado ({correo=prueba107.2020@gmail.com, nombre=prueba1069, apellido=prueba2 prueba, telefono=3002430976, producto=televisor})" width="0"/>
+                <img src="24a2242b2c91c9043dc1a0a0b57ce90be6a7d065bcf91e3e6c68bc99718942ee.png" title=" Given que el usuario se encuentra en la pagina web alkomprar.com" width="0"/>
+                <img src="24a2242b2c91c9043dc1a0a0b57ce90be6a7d065bcf91e3e6c68bc99718942ee.png" title=" Devon abrir pagina inicial" width="0"/>
+                <img src="24a2242b2c91c9043dc1a0a0b57ce90be6a7d065bcf91e3e6c68bc99718942ee.png" title=" Devon opens the browser at https://www.alkomprar.com/" width="0"/>
+                <img src="6ecc2bfb86ba8a430e88e183e638a96166e57b164682b9f99efa57e978394b67.png" title=" Devon opens the browser at https://www.alkomprar.com/ (completed)" width="0"/>
+                <img src="6ecc2bfb86ba8a430e88e183e638a96166e57b164682b9f99efa57e978394b67.png" title=" Devon abrir pagina inicial (completed)" width="0"/>
+                <img src="6ecc2bfb86ba8a430e88e183e638a96166e57b164682b9f99efa57e978394b67.png" title=" Given que el usuario se encuentra en la pagina web alkomprar.com (completed)" width="0"/>
+                <img src="6ecc2bfb86ba8a430e88e183e638a96166e57b164682b9f99efa57e978394b67.png" title=" When se registra e inicia sesion con &quot;prueba107.2020@gmail.com&quot;,&quot;prueba1069&quot;,&quot;prueba2 prueba&quot;,&quot;3002430976&quot;" width="0"/>
+                <img src="6ecc2bfb86ba8a430e88e183e638a96166e57b164682b9f99efa57e978394b67.png" title=" Devon navegar a registro" width="0"/>
+                <img src="6ecc2bfb86ba8a430e88e183e638a96166e57b164682b9f99efa57e978394b67.png" title=" Devon clicks on Boton mi cuenta" width="0"/>
+                <img src="a562873eb85b4b221c576665f9f561c50aa8e2d25218e159f2e7088b05079a3d.png" title=" Devon clicks on Boton mi cuenta (completed)" width="0"/>
+                <img src="a562873eb85b4b221c576665f9f561c50aa8e2d25218e159f2e7088b05079a3d.png" title=" Devon navegar a registro (completed)" width="0"/>
+                <img src="a562873eb85b4b221c576665f9f561c50aa8e2d25218e159f2e7088b05079a3d.png" title=" Devon llenar registro" width="0"/>
+                <img src="a562873eb85b4b221c576665f9f561c50aa8e2d25218e159f2e7088b05079a3d.png" title=" Devon clicks on campo email" width="0"/>
+                <img src="2c6af5a3cd9311433b9ef68bda0b049be326c642ed9667838b59fddfbcce1d35.png" title=" Devon clicks on campo email (completed)" width="0"/>
+                <img src="2c6af5a3cd9311433b9ef68bda0b049be326c642ed9667838b59fddfbcce1d35.png" title=" Devon enters 'prueba107.2020@gmail.com' into campo email" width="0"/>
+                <img src="383e758108cfe86c02e5bc4a09a8be4a1461d1ad6d9058aedd4670c807f2c9d0.png" title=" Devon enters 'prueba107.2020@gmail.com' into campo email (completed)" width="0"/>
+                <img src="383e758108cfe86c02e5bc4a09a8be4a1461d1ad6d9058aedd4670c807f2c9d0.png" title=" Devon clicks on boton continuar" width="0"/>
+                <img src="55d9653fa03c7e4c3486da1f81ad3ff95e33500581a23d711c6a34bb8839a7d7.png" title=" Devon clicks on boton continuar (completed)" width="0"/>
+                <img src="55d9653fa03c7e4c3486da1f81ad3ff95e33500581a23d711c6a34bb8839a7d7.png" title=" Devon enters 'prueba1069' into campo nombre" width="0"/>
+                <img src="8de4a64207d869dffc5f36c3e19ee239b159a4ec9107d02ca8add4dbf468d3d5.png" title=" Devon enters 'prueba1069' into campo nombre (completed)" width="0"/>
+                <img src="8de4a64207d869dffc5f36c3e19ee239b159a4ec9107d02ca8add4dbf468d3d5.png" title=" Devon enters 'prueba2 prueba' into campo apellido" width="0"/>
+                <img src="856c3d60f164590ac5a359ed3e47edc9a57dabd9b3a26ef99ab237d9ea461bcd.png" title=" Devon enters 'prueba2 prueba' into campo apellido (completed)" width="0"/>
+                <img src="856c3d60f164590ac5a359ed3e47edc9a57dabd9b3a26ef99ab237d9ea461bcd.png" title=" Devon enters '3002430976' into campo telefono" width="0"/>
+                <img src="802b9f6da423f3f0d3d87ccbff604ae033d2c8138428f9e5a3bbb8a366354c89.png" title=" Devon enters '3002430976' into campo telefono (completed)" width="0"/>
+                <img src="76da1eb875afe0a9f6716adfa3c57e9ea45e0cd589f65f638169b1f345a21e90.png" title=" Devon clicks on campo terminos y condiciones" width="0"/>
+                <img src="2a4b8c15fe80ae5534efa10510c115f40ea8d543bf4dd7b860b9aa61247d0f0c.png" title=" Devon clicks on campo terminos y condiciones (completed)" width="0"/>
+                <img src="2a4b8c15fe80ae5534efa10510c115f40ea8d543bf4dd7b860b9aa61247d0f0c.png" title=" Devon clicks on boton continuar registro" width="0"/>
+                <img src="50f2859a7538aa6640590bc05885bbc428b15d26b33d25244faeb4dc939581af.png" title=" Devon clicks on boton continuar registro (completed)" width="0"/>
+                <img src="50f2859a7538aa6640590bc05885bbc428b15d26b33d25244faeb4dc939581af.png" title=" Devon llenar registro (completed)" width="0"/>
+                <img src="50f2859a7538aa6640590bc05885bbc428b15d26b33d25244faeb4dc939581af.png" title=" When se registra e inicia sesion con &quot;prueba107.2020@gmail.com&quot;,&quot;prueba1069&quot;,&quot;prueba2 prueba&quot;,&quot;3002430976&quot; (completed)" width="0"/>
+                <img src="50f2859a7538aa6640590bc05885bbc428b15d26b33d25244faeb4dc939581af.png" title=" And selecciona un producto &quot;televisor&quot; finalizando su compra" width="0"/>
+                <img src="50f2859a7538aa6640590bc05885bbc428b15d26b33d25244faeb4dc939581af.png" title=" Devon seleccionar producto" width="0"/>
+                <img src="50f2859a7538aa6640590bc05885bbc428b15d26b33d25244faeb4dc939581af.png" title=" Devon clicks on campo busqueda producto" width="0"/>
+                <img src="9c7353a410ee8c1e48e17276f0417ccf8849eb0c033baa817e38ea7550e2220b.png" title=" Devon clicks on campo busqueda producto (completed)" width="0"/>
+                <img src="9c7353a410ee8c1e48e17276f0417ccf8849eb0c033baa817e38ea7550e2220b.png" title=" Devon enters 'televisor' into campo busqueda producto" width="0"/>
+                <img src="73e390d915a2cc9e8b1a097a4663564b645b84dd12852c76df19db236298d96e.png" title=" Devon enters 'televisor' into campo busqueda producto (completed)" width="0"/>
+                <img src="73e390d915a2cc9e8b1a097a4663564b645b84dd12852c76df19db236298d96e.png" title=" Devon types 'ENTER' in campo busqueda producto" width="0"/>
+                <img src="3f0739b8d1cc818a0867e5df19cbac790ff8a88679ed74e14e62c12349042b47.png" title=" Devon types 'ENTER' in campo busqueda producto (completed)" width="0"/>
+                <img src="771c682316dbcde11fdcf9c06191537048c8f6eaf3de713cb5cc1ae1d96609f8.png" title=" Devon clicks on  producto" width="0"/>
+                <img src="b5632d3080b12b286d745a7eaad9bb1e198541dfdd844bc8a5addb2ad9a7e169.png" title=" Devon clicks on  producto (completed)" width="0"/>
+                <img src="19d889f88a6b03a358b4ac3ebb34f890dcb32c45b1bae3ce565ae8747c69f68b.png" title=" Devon clicks on  ir a carrito " width="0"/>
+                <img src="8f98bd12f4cc5f0a78e07f3b085134f6c0413d783d000f144ec9e99754821195.png" title=" Devon clicks on  ir a carrito  (completed)" width="0"/>
+                <img src="8d777617c6f368defa038f14105529a06778164519bedbb66fff8620bd43b62a.png" title=" Devon clicks on  boton ir a pagar " width="0"/>
+                <img src="12539ee3589c6d037d6641aa3232d9c5bb97efb0abb70b62fb8021b31ae809b3.png" title=" Devon clicks on  boton ir a pagar  (completed)" width="0"/>
+                <img src="12539ee3589c6d037d6641aa3232d9c5bb97efb0abb70b62fb8021b31ae809b3.png" title=" Devon seleccionar producto (completed)" width="0"/>
+                <img src="4fa6fe3a3f2040c29db0913a08d9e4a227ad16ed7ca5b36f7dd5cacb6361be09.png" title=" Devon completar datos pago" width="0"/>
+                <img src="4fa6fe3a3f2040c29db0913a08d9e4a227ad16ed7ca5b36f7dd5cacb6361be09.png" title=" Devon clicks on  campo tipo documento " width="0"/>
+                <img src="2a0c66bc6c93725550abab557bcba808c68e8262bcfc7e56010fbfa0d2cfe5f4.png" title=" Devon clicks on  campo tipo documento  (completed)" width="0"/>
+                <img src="2a0c66bc6c93725550abab557bcba808c68e8262bcfc7e56010fbfa0d2cfe5f4.png" title=" Devon clicks on  select tipo documento " width="0"/>
+                <img src="eb904d84d48692022157c684b4a9cf2487659444c1f68025c5be57f9488e94dc.png" title=" Devon clicks on  select tipo documento  (completed)" width="0"/>
+                <img src="eb904d84d48692022157c684b4a9cf2487659444c1f68025c5be57f9488e94dc.png" title=" Devon enters '8798101947' into  campo numero documento " width="0"/>
+                <img src="c07da5e95edac1d1659860b9b0b32dfaed0f2bd810daac9a141fd0e59e0a920b.png" title=" Devon enters '8798101947' into  campo numero documento  (completed)" width="0"/>
+                <img src="d2db3134416546da4416862c4aec105487bc762576ba6a1c48a1ab79c5a2f5db.png" title=" Devon clicks on  campo departamento " width="0"/>
+                <img src="e7885b0e1b364743cc903c5fd9932214471bca1e297708ec3111f0d00124cb48.png" title=" Devon clicks on  campo departamento  (completed)" width="0"/>
+                <img src="e7885b0e1b364743cc903c5fd9932214471bca1e297708ec3111f0d00124cb48.png" title=" Devon clicks on  select departamento " width="0"/>
+                <img src="fff121e31bba519e60cd24a97ad1fcca7aa307b8621b1e2ca0a6599dfd004b52.png" title=" Devon clicks on  select departamento  (completed)" width="0"/>
+                <img src="51f939c16841d714fe6335a388a99492fba806531a6fac606235c4486a919661.png" title=" Devon clicks on campo direccion " width="0"/>
+                <img src="719475f760c48234db1569e9b4dcf1a676ae02c17fa0b70899e422c7d8d33c80.png" title=" Devon clicks on campo direccion  (completed)" width="0"/>
+                <img src="719475f760c48234db1569e9b4dcf1a676ae02c17fa0b70899e422c7d8d33c80.png" title=" Devon enters 'Calle 43 # 36 - 45' into campo direccion " width="0"/>
+                <img src="6d6400c0cfa56bb522460661a479e3cb4ffcaf59112b599fc8c06ebdc0a6b489.png" title=" Devon enters 'Calle 43 # 36 - 45' into campo direccion  (completed)" width="0"/>
+                <img src="6d6400c0cfa56bb522460661a479e3cb4ffcaf59112b599fc8c06ebdc0a6b489.png" title=" Devon clicks on campo barrio " width="0"/>
+                <img src="e0315d22f78582cc54f85a0b0eaa845aa77cc2bdc3ea839f6e57089aa412d203.png" title=" Devon clicks on campo barrio  (completed)" width="0"/>
+                <img src="e0315d22f78582cc54f85a0b0eaa845aa77cc2bdc3ea839f6e57089aa412d203.png" title=" Devon enters 'Gand&iacute;a' into campo barrio " width="0"/>
+                <img src="ab75d95d802287014c4412472c92d801372d824e16b6ee129e53233528830c64.png" title=" Devon enters 'Gand&iacute;a' into campo barrio  (completed)" width="0"/>
+                <img src="ab75d95d802287014c4412472c92d801372d824e16b6ee129e53233528830c64.png" title=" Devon clicks on check guardar direccion " width="0"/>
+                <img src="ca018b332c1ddb89efc615bc16f8f5651ec2b95fb229d901c5e2583daa1c90c2.png" title=" Devon clicks on check guardar direccion  (completed)" width="0"/>
+                <img src="8b7071e7850c9ae12a46f21e597297812e74b576d88c7df08e73bf15fd38594e.png" title=" Devon clicks on boton continuar pago" width="0"/>
+                <img src="cc961b1d38a907b280fe1d9ca17d42f50d07851b778b01bcc5fa6af64a8da921.png" title=" Devon clicks on boton continuar pago (completed)" width="0"/>
+
+                <img src="5e52881700b220743d65fb0fa03cfedb6a191a9d1588e799c56f1fa7a74709b4.png" title=" Devon completar datos pago (completed): <span class='failing-color'>FAILURE</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.46</span>
+</div>
+</body>
+</html>

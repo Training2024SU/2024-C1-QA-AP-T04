@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name=": realizar compra de producto" skipped="0" tests="1" time="7.48" timestamp="2024-05-17 12:47:43"><testcase name="Realizar compra de producto con usuario registrado"><error type="java.lang.NullPointerException"/><system-err>null&#13;
+com.google.common.base.Preconditions.checkNotNull(Preconditions.java:903)&#13;
+osorio.alvarez.devon.stepdefinitions.CompraProductoStepDefinitions.queElUsuarioSeEncuentraEnLaPaginaWebAlkomprarCom(ComproProductoStepDefinitions.java:29)&#13;
+✽.que el usuario se encuentra en la pagina web alkomprar.com "chrome"(file:///C:/Users/shelena%20suarez/Desktop/RETO-ScreenPlay/AutomatizacionAlkomprar/src/test/resources/features/prueba.feature:10)&#13;
+</system-err></testcase></testsuite>
