@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.com.sofka.runners.RunnerCarrito" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-05-19T21:33:37" hostname="DESKTOP-KATHE" time="0.003">
+  <properties/>
+  <testcase name="initializationError" classname="co.com.sofka.runners.RunnerCarrito" time="0.003">
+    <failure message="io.cucumber.core.gherkin.FeatureParserException: Failed to parse resource at: file:///C:/Users/kathe/OneDrive/Desktop/MonkyScreenPlay/src/test/resources/features/procesodecompra.feature&#10;(48:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Escenario: Realizar compra de tenis'&#10;(49:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Dado que el usuario se encuentra en la página de Monky'&#10;(50:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Y navega a la sección de &quot;Tenis para mujer&quot;'&#10;(51:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Cuando selecciona los tenis para mujer eligiendo la talla con la cantidad deseada'&#10;(52:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Y agrega los tenis al carrito confirmando la compra'&#10;(53:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Y llena el formulario de entrega y pago con los siguientes datos'&#10;(54:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got '| correoElectronico | pais     | nombre | apellidos | direccion       | casaApartamento   | ciudad   | provincia | codigoPostal | telefono   |'&#10;(55:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got '| andres@ejm.com    | Colombia | Andres | Perez     | Calle Falsa 123 | Casa primer piso  | Ciudad X | Antioquia | 12345        | 1234567890 |'&#10;(56:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Y el usuario verifica el carrito'&#10;(57:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Entonces deberia visualizar un mensaje con la informacion de su orden'&#10;(58:0): unexpected end of file, expected: #TagLine, #FeatureLine, #Comment, #Empty" type="io.cucumber.core.gherkin.FeatureParserException">io.cucumber.core.gherkin.FeatureParserException: Failed to parse resource at: file:///C:/Users/kathe/OneDrive/Desktop/MonkyScreenPlay/src/test/resources/features/procesodecompra.feature
+(48:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Escenario: Realizar compra de tenis'
+(49:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Dado que el usuario se encuentra en la página de Monky'
+(50:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Y navega a la sección de &quot;Tenis para mujer&quot;'
+(51:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Cuando selecciona los tenis para mujer eligiendo la talla con la cantidad deseada'
+(52:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Y agrega los tenis al carrito confirmando la compra'
+(53:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Y llena el formulario de entrega y pago con los siguientes datos'
+(54:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got '| correoElectronico | pais     | nombre | apellidos | direccion       | casaApartamento   | ciudad   | provincia | codigoPostal | telefono   |'
+(55:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got '| andres@ejm.com    | Colombia | Andres | Perez     | Calle Falsa 123 | Casa primer piso  | Ciudad X | Antioquia | 12345        | 1234567890 |'
+(56:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Y el usuario verifica el carrito'
+(57:1): expected: #TagLine, #FeatureLine, #Comment, #Empty, got 'Entonces deberia visualizar un mensaje con la informacion de su orden'
+(58:0): unexpected end of file, expected: #TagLine, #FeatureLine, #Comment, #Empty
+	at app//io.cucumber.core.gherkin.messages.GherkinMessagesFeatureParser.parse(GherkinMessagesFeatureParser.java:56)
+	at app//io.cucumber.core.feature.FeatureParser.parseResource(FeatureParser.java:46)
+	at java.base@17.0.10/java.util.function.BiFunction.lambda$andThen$0(BiFunction.java:70)
+	at app//io.cucumber.core.resource.ResourceScanner.lambda$processResource$1(ResourceScanner.java:79)
+	at app//io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:75)
+	at app//io.cucumber.core.resource.PathScanner$ResourceFileVisitor.visitFile(PathScanner.java:60)
+	at java.base@17.0.10/java.nio.file.Files.walkFileTree(Files.java:2811)
+	at app//io.cucumber.core.resource.PathScanner.findResourcesForPath(PathScanner.java:53)
+	at app//io.cucumber.core.resource.PathScanner.findResourcesForUri(PathScanner.java:31)
+	at app//io.cucumber.core.resource.ResourceScanner.findResourcesForUri(ResourceScanner.java:61)
+	at app//io.cucumber.core.resource.ResourceScanner.scanForResourcesUri(ResourceScanner.java:134)
+	at app//io.cucumber.core.runtime.FeaturePathFeatureSupplier.loadFeatures(FeaturePathFeatureSupplier.java:62)
+	at app//io.cucumber.core.runtime.FeaturePathFeatureSupplier.get(FeaturePathFeatureSupplier.java:45)
+	at app//io.cucumber.junit.CucumberSerenityBaseRunner.parseFeaturesEarly(CucumberSerenityBaseRunner.java:215)
+	at app//io.cucumber.junit.CucumberSerenityRunner.&lt;init&gt;(CucumberSerenityRunner.java:41)
+	at app//net.serenitybdd.cucumber.CucumberWithSerenity.&lt;init&gt;(CucumberWithSerenity.java:12)
+	at java.base@17.0.10/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base@17.0.10/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base@17.0.10/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base@17.0.10/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base@17.0.10/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at app//org.junit.internal.builders.AnnotatedBuilder.buildRunner(AnnotatedBuilder.java:104)
+	at app//org.junit.internal.builders.AnnotatedBuilder.runnerForClass(AnnotatedBuilder.java:86)
+	at app//org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:70)
+	at app//org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:37)
+	at app//org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:70)
+	at app//org.junit.internal.requests.ClassRequest.createRunner(ClassRequest.java:28)
+	at app//org.junit.internal.requests.MemoizingRequest.getRunner(MemoizingRequest.java:19)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:77)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:40)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:60)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:52)
+	at java.base@17.0.10/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.10/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.10/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.10/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Class path contains multiple SLF4J providers.
+SLF4J: Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@7fee8714]
+SLF4J: Found provider [org.slf4j.simple.SimpleServiceProvider@4229bb3f]
+SLF4J: See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual provider is of type [ch.qos.logback.classic.spi.LogbackServiceProvider@7fee8714]
+]]></system-err>
+</testsuite>
